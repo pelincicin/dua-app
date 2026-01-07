@@ -1,0 +1,23 @@
+{
+    "gununDuasi": {
+        "title": "Bereket Duası",
+        "content": "Allahümme barik fîhi velâ tedurrahü.",
+        "meaning": "Allah'ım bunu bize mübarek kıl ve bize zarar vermesin."
+    },
+    "gununSunneti": "Peygamber Efendimiz (sav) suyu üç yudumda ve oturarak içerdi.",
+    "categories": [
+        {
+            "id": "kat1",
+            "name": "Yemek Duaları",
+            "prayers": [
+                {
+                    "id": "y1",
+                    "title": "Yemeğe Başlarken",
+                    "arabic": "بِسْمِ اللّٰهِ",
+                    "reading": "Bismillah",
+                    "meaning": "Allah'ın adıyla."
+                }
+            ]
+        }
+    ]
+}
