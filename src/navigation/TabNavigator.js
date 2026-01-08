@@ -1,5 +1,9 @@
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Platform, Text } from 'react-native';
+import { Animated, Platform, StyleSheet } from 'react-native';
+
+// Tema context'ini çekiyoruz
+import { useTheme } from '../context/ThemeContext';
 
 import AnaSayfa from '../screens/AnaSayfa';
 import Dualar from '../screens/Dualar';
@@ -8,31 +12,98 @@ import Zikirmatik from '../screens/Zikirmatik';
 const Tab = createBottomTabNavigator();
 
 export default function TabNavigator() {
+    // Global temayı kullanıyoruz
+    const { theme, isDarkMode } = useTheme();
+
     return (
         <Tab.Navigator
             screenOptions={({ route }) => ({
-                tabBarIcon: ({ focused }) => {
-                    let icon;
-                    if (route.name === 'Ana Sayfa') icon = '🏠';
-                    else if (route.name === 'Dualar') icon = '📖';
-                    else if (route.name === 'Zikirmatik') icon = '📿';
-                    return <Text style={{ fontSize: 25 }}>{icon}</Text>;
+                headerShown: true,
+                // Başlık alanını temaya göre boyuyoruz
+                headerStyle: {
+                    backgroundColor: theme.bg,
+                    elevation: 0,
+                    shadowOpacity: 0,
+                    borderBottomWidth: 1,
+                    borderBottomColor: theme.border,
                 },
-                tabBarActiveTintColor: '#166534',
-                tabBarInactiveTintColor: 'gray',
-                tabBarStyle: {
-                    height: Platform.OS === 'ios' ? 100 : 80,
-                    paddingBottom: Platform.OS === 'ios' ? 30 : 15,
-                    paddingTop: 10
+                headerTitleStyle: {
+                    fontWeight: '900',
+                    fontSize: 20,
+                    color: theme.text,
                 },
-                tabBarLabelStyle: { fontSize: 14, fontWeight: 'bold' },
-                headerStyle: { backgroundColor: '#f0fdf4' },
-                headerTitleStyle: { fontWeight: 'bold', fontSize: 22 }
+
+                // Menü renklerini temaya göre boyuyoruz
+                tabBarActiveTintColor: theme.active, // #2D6A4F
+                tabBarInactiveTintColor: theme.subText,
+                tabBarStyle: [
+                    styles.tabBar,
+                    {
+                        backgroundColor: theme.card,
+                        borderTopColor: theme.border
+                    }
+                ],
+                tabBarLabelStyle: styles.tabBarLabel,
+
+                // Sayfa geçiş animasyonu
+                animation: 'fade',
+
+                tabBarIcon: ({ focused, color }) => {
+                    let iconName;
+                    if (route.name === 'Ana Sayfa') iconName = focused ? 'home-variant' : 'home-variant-outline';
+                    else if (route.name === 'Dualar') iconName = focused ? 'book-open-variant' : 'book-outline';
+                    else if (route.name === 'Zikirmatik') iconName = focused ? 'hands-pray' : 'hands-pray';
+
+                    return (
+                        <Animated.View style={focused ? styles.activeIconAnimation : null}>
+                            <MaterialCommunityIcons name={iconName} size={24} color={color} />
+                        </Animated.View>
+                    );
+                },
             })}
         >
-            <Tab.Screen name="Ana Sayfa" component={AnaSayfa} />
-            <Tab.Screen name="Dualar" component={Dualar} />
-            <Tab.Screen name="Zikirmatik" component={Zikirmatik} />
+            <Tab.Screen
+                name="Ana Sayfa"
+                component={AnaSayfa}
+                options={{
+                    headerShown: false,
+                    title: 'Ana Sayfa',
+                }}
+            />
+            <Tab.Screen
+                name="Dualar"
+                component={Dualar}
+                options={{
+                    headerShown: false,
+                    title: 'Dualar',
+                }}
+            />
+            <Tab.Screen
+                name="Zikirmatik"
+                component={Zikirmatik}
+                options={{
+                    headerShown: false,
+                    title: 'Zikirmatik'
+                }}
+            />
         </Tab.Navigator>
     );
 }
+
+const styles = StyleSheet.create({
+    tabBar: {
+        height: Platform.OS === 'ios' ? 90 : 70,
+        paddingBottom: Platform.OS === 'ios' ? 30 : 12,
+        paddingTop: 10,
+        borderTopWidth: 1,
+        elevation: 0,
+    },
+    tabBarLabel: {
+        fontSize: 12,
+        fontWeight: '700',
+        marginTop: 2,
+    },
+    activeIconAnimation: {
+        transform: [{ scale: 1.1 }, { translateY: -2 }],
+    }
+});
