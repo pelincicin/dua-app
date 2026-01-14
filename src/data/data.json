@@ -1,0 +1,548 @@
+{
+    "dualar": [
+        {
+            "id": 1,
+            "baslik": "Rabbi Yessir",
+            "arapca": "رَبِّ يَسِّرْ وَلاَ تُعَسِّرْ رَبِّ تَمِّمْ بِالْخَيْرِ",
+            "turkce": "Rabbi yessir velâ tüassir Rabbi temmim bi'l-hayr",
+            "anlam": "Rabbim! İşimi kolaylaştır, zorlaştırma. Rabbim! İşimi hayırla tamamla.",
+            "kategori": "Hacet & İstek"
+        },
+        {
+            "id": 2,
+            "baslik": "Yemek Duası",
+            "arapca": "اَلْحَمْدُ لِلّٰهِ الَّذ۪ي اَطْعَمَنَا وَسَقَانَا وَجَعَلَنَا مِنَ الْمُسْلِم۪ينَ",
+            "turkce": "Elhamdülillâhillezî et'amenâ ve sekânâ ve cealenâ minel müslimîn",
+            "anlam": "Bizi yediren, içiren ve Müslüman kılan Allah'a hamdolsun.",
+            "kategori": "Günlük Dualar"
+        },
+        {
+            "id": 3,
+            "baslik": "Anne-Baba İçin Dua",
+            "arapca": "رَبِّ اجْعَلْنِي مُقِيمَ الصَّلَاةِ وَمِنْ ذُرِّيَّتِي ۚ رَبَّنَا وَتَقَبَّلْ دُعَاءِ",
+            "turkce": "Rabbic’alnî mukîmes salâti ve min zurriyyetî rabbenâ ve tekabbel duâ",
+            "anlam": "Rabbim! Beni ve neslimi namazı devamlı kılanlardan eyle. Rabbimiz! Duamı kabul et.",
+            "kategori": "Aile & Nesil"
+        },
+        {
+            "id": 4,
+            "baslik": "Şifa Duası",
+            "arapca": "أَذْهِبِ الْبَأْسَ رَبَّ النَّاسِ وَاشْفِ أَنْتَ الشَّافِي",
+            "turkce": "Ezhibil-be'se rabben-nâsi veşfi ente'ş-şâfî",
+            "anlam": "Bu hastalığı gider ey insanların Rabbi! Şifa ver, çünkü şifa verici sensin.",
+            "kategori": "Hastalık & Şifa"
+        },
+        {
+            "id": 5,
+            "baslik": "Sıkıntı Anında Dua",
+            "arapca": "لاَ إِلَهَ إِلاَّ أَنْتَ سُبْحَانَكَ إِنِّي كُنْتُ مِنَ الظَّالِمِينَ",
+            "turkce": "Lâ ilâhe illâ ente subhâneke innî kuntu minez-zâlimîn",
+            "anlam": "Senden başka ilah yoktur. Seni eksikliklerden tenzih ederim. Ben zalimlerden oldum.",
+            "kategori": "Sıkıntı & Ferahlık"
+        },
+        {
+            "id": 6,
+            "baslik": "Uykuya Yatarken",
+            "arapca": "بِاسْمِكَ اللَّهُمَّ أَمُوتُ وَأَحْيَا",
+            "turkce": "Bismikellahumme emûtu ve ahyâ",
+            "anlam": "Allah'ım! Senin isminle ölür (uyur) ve senin isminle dirilirim.",
+            "kategori": "Günlük Dualar"
+        },
+        {
+            "id": 7,
+            "baslik": "Evden Çıkarken",
+            "arapca": "بِسْمِ اللهِ تَوَكَّلْتُ عَلَى اللهِ",
+            "turkce": "Bismillâhi tevekkeltü alallâh",
+            "anlam": "Allah'ın adıyla, Allah'a tevekkül ettim.",
+            "kategori": "Günlük Dualar"
+        },
+        {
+            "id": 8,
+            "baslik": "İlim Artırma Duası",
+            "arapca": "رَبِّ زِدْنِي عِلْمًا",
+            "turkce": "Rabbi zidnî ilmen",
+            "anlam": "Rabbim, ilmimi artır.",
+            "kategori": "Hacet & İstek"
+        },
+        {
+            "id": 9,
+            "baslik": "Nazar Duası",
+            "arapca": "وَإِن يَكَادُ الَّذِينَ كَفَرُوا لَيُزْلِقُونَكَ بِأَبْصَارِهِمْ...",
+            "turkce": "Ve in yekâdullezîne keferû leyuzlikûneke bi ebsârihim...",
+            "anlam": "O inkâr edenler Kur'an'ı işittikleri zaman, seni neredeyse gözleriyle devireceklerdi.",
+            "kategori": "Korunma"
+        },
+        {
+            "id": 10,
+            "baslik": "Tövbe ve İstigfar",
+            "arapca": "أَسْتَغْفِرُ اللهَ الْعَظِيمَ وَأَتُوبُ إِلَيْهِ",
+            "turkce": "Estağfirullâhel'azîm ve etûbu ileyh",
+            "anlam": "Yüce Allah'tan bağışlanmamı dilerim ve O'na tövbe ederim.",
+            "kategori": "Tövbe"
+        },
+        {
+            "id": 11,
+            "baslik": "Dünya ve Ahiret İyiliği",
+            "arapca": "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الآخِرَةِ حَسَنَةً",
+            "turkce": "Rabbenâ âtinâ fid-dünyâ haseneten ve fil-âhirati haseneten",
+            "anlam": "Rabbimiz! Bize dünyada da iyilik ver, ahirette de iyilik ver.",
+            "kategori": "Genel Dualar"
+        },
+        {
+            "id": 12,
+            "baslik": "Hidayet Duası",
+            "arapca": "رَبَّنَا لاَ تُزِغْ قُلُوبَنَا بَعْدَ إِذْ هَدَيْتَنَا",
+            "turkce": "Rabbenâ lâ tuziğ kulûbenâ ba'de iz hedeytenâ",
+            "anlam": "Rabbimiz! Bizi hidayete erdirdikten sonra kalplerimizi saptırma.",
+            "kategori": "Hidayet"
+        },
+        {
+            "id": 13,
+            "baslik": "Sabır Duası",
+            "arapca": "رَبَّنَا أَفْرِغْ عَلَيْنَا صَبْرًا وَتَوَفَّنَا مُسْلِمِينَ",
+            "turkce": "Rabbenâ efriğ aleynâ sabran ve teveffenâ muslimîn",
+            "anlam": "Rabbimiz! Üzerimize sabır yağdır ve bizi Müslüman olarak öldür.",
+            "kategori": "Zor Zamanlar"
+        },
+        {
+            "id": 14,
+            "baslik": "Korku Anında Dua",
+            "arapca": "حَسْبُنَا اللَّهُ وَنِعْمَ الْوَكِيلُ",
+            "turkce": "Hasbunallâhu ve ni'mel vekîl",
+            "anlam": "Allah bize yeter, O ne güzel vekildir.",
+            "kategori": "Korunma"
+        },
+        {
+            "id": 15,
+            "baslik": "Bereket Duası",
+            "arapca": "اللَّهُمَّ بَارِكْ لَنَا فِيمَا رَزَقْتَنَا",
+            "turkce": "Allâhumme bârik lenâ fîmâ razaktenâ",
+            "anlam": "Allah'ım! Bize verdiğin rızıkları bereketli kıl.",
+            "kategori": "Rızık"
+        },
+        {
+            "id": 16,
+            "baslik": "Kötülükten Korunma",
+            "arapca": "أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ",
+            "turkce": "Eûzu bi-kelimâtillâhit-tâmmâti min şerri mâ halak",
+            "anlam": "Yarattıklarının şerrinden Allah'ın tam kelimelerine sığınırım.",
+            "kategori": "Korunma"
+        },
+        {
+            "id": 17,
+            "baslik": "İşlerin Kolaylaşması",
+            "arapca": "اللَّهُمَّ لاَ سَهْلَ إِلاَّ مَا جَعَلْتَهُ سَهْلاً",
+            "turkce": "Allâhumme lâ sehle illâ mâ cealtehu sehlen",
+            "anlam": "Allah'ım! Senin kolay kıldığından başka kolay yoktur.",
+            "kategori": "Hacet"
+        },
+        {
+            "id": 18,
+            "baslik": "Salavat-ı Şerife",
+            "arapca": "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ",
+            "turkce": "Allâhumme salli alâ Muhammedin ve alâ âli Muhammed",
+            "anlam": "Allah'ım! Hz. Muhammed'e ve onun aline salat ve selam eyle.",
+            "kategori": "Salavat"
+        },
+        {
+            "id": 19,
+            "baslik": "Şükür Duası",
+            "arapca": "رَبِّ أَوْزِعْنِي أَنْ أَشْكُرَ نِعْمَتَكَ",
+            "turkce": "Rabbi evzi'nî en eşküre ni'meteke",
+            "anlam": "Rabbim! Bana verdiğin nimete şükretmemi bana ilham et.",
+            "kategori": "Şükür"
+        },
+        {
+            "id": 20,
+            "baslik": "Kabristana Girince",
+            "arapca": "السَّلاَمُ عَلَيْكُمْ أَهْلَ الدِّيَارِ مِنَ الْمُؤْمِنِينَ",
+            "turkce": "Esselâmu aleykum ehled-diyâri minel mu'minîn",
+            "anlam": "Selam size ey bu diyarın mümin sakinleri!",
+            "kategori": "Ziyaret"
+        },
+        {
+            "id": 21,
+            "baslik": "Güzel Ahlak Duası",
+            "arapca": "اللَّهُمَّ اهْدِنِي لِأَحْسَنِ الْأَخْلَاقِ",
+            "turkce": "Allâhummehdinî li-ahsenil ahlâk",
+            "anlam": "Allah'ım! Beni ahlakın en güzeline ulaştır.",
+            "kategori": "Ahlak"
+        },
+        {
+            "id": 22,
+            "baslik": "Bela ve Musibetten Korunma",
+            "arapca": "بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ",
+            "turkce": "Bismillâhillezî lâ yedurru measmihi şey’un",
+            "anlam": "İsmiyle beraber yerde ve gökte hiçbir şeyin zarar veremeyeceği Allah'ın adıyla.",
+            "kategori": "Korunma"
+        },
+        {
+            "id": 23,
+            "baslik": "Gönül Ferahlığı",
+            "arapca": "رَبِّ اشْرَحْ لِي صَدْرِي وَيَسِّرْ لِي أَمْرِي",
+            "turkce": "Rabbişrah lî sadrî ve yessir lî emrî",
+            "anlam": "Rabbim! Gönlüme ferahlık ver, işimi kolaylaştır.",
+            "kategori": "Sıkıntı"
+        },
+        {
+            "id": 24,
+            "baslik": "Namaz Sonrası Tesbihat",
+            "arapca": "سُبْحَانَ اللَّهِ وَالْحَمْدُ لِلَّهِ وَاللَّهُ أَكْبَرُ",
+            "turkce": "Sübhânallâhi velhamdülillâhi vallâhu ekber",
+            "anlam": "Allah eksikliklerden uzaktır, hamd Allah'adır, Allah en büyüktür.",
+            "kategori": "Tesbihat"
+        },
+        {
+            "id": 25,
+            "baslik": "Günahların Bağışlanması",
+            "arapca": "رَبَّنَا اغْفِرْ لَنَا ذُنُوبَنَا وَكَفِّرْ عَنَّا سَيِّئَاتِنَا",
+            "turkce": "Rabbenâğfirlenâ zunûbenâ ve keffir annâ seyyiâtinâ",
+            "anlam": "Rabbimiz! Günahlarımızı bağışla, kötülüklerimizi ört.",
+            "kategori": "Tövbe"
+        },
+        {
+            "id": 26,
+            "baslik": "Aynaya Bakarken",
+            "arapca": "اللَّهُمَّ كَمَا حَسَّنْتَ خَلْقِي فَحَسِّنْ خُلُقِي",
+            "turkce": "Allâhumme kemâ hassente halkî fe-hassin hulukî",
+            "anlam": "Allah'ım! Yaratılışımı güzel kıldığın gibi ahlakımı da güzelleştir.",
+            "kategori": "Günlük"
+        },
+        {
+            "id": 27,
+            "baslik": "İstihare Duası (Kısa)",
+            "arapca": "اللَّهُمَّ خِرْ لِي وَاخْتَرْ لِي",
+            "turkce": "Allâhumme hir lî vahter lî",
+            "anlam": "Allah'ım! Hakkımda hayırlı olanı bana nasip et ve benim için seç.",
+            "kategori": "Hacet"
+        },
+        {
+            "id": 28,
+            "baslik": "Kenzül Arş (Kısa Bölüm)",
+            "arapca": "لاَ إِلَهَ إِلاَّ اللَّهُ الْمَلِكُ الْحَقُّ الْمُبِينُ",
+            "turkce": "Lâ ilâhe illallâhul melikul hakkul mubîn",
+            "anlam": "Apaçık hak ve gerçek mülk sahibi Allah'tan başka ilah yoktur.",
+            "kategori": "Zikir"
+        },
+        {
+            "id": 29,
+            "baslik": "İftarda Okunan Dua",
+            "arapca": "ذَهَبَ الظَّمَأُ وَابْتَلَّتِ الْعُرُوقُ",
+            "turkce": "Zehebez-zame' vebtelletil-urûk",
+            "anlam": "Susuzluk gitti, damarlar ıslandı, inşallah ecir hasıl oldu.",
+            "kategori": "Ramazan"
+        },
+        {
+            "id": 30,
+            "baslik": "Fatiha Suresi (Dua Niyetiyle)",
+            "arapca": "اَلْحَمْدُ لِلّٰهِ رَبِّ الْعَالَم۪ينَۙ",
+            "turkce": "Elhamdü lillâhi rabbil âlemîn",
+            "anlam": "Hamd, alemlerin Rabbi olan Allah'adır.",
+            "kategori": "Kur'an"
+        }
+    ],
+    "sunnetler": [
+        {
+            "id": 1,
+            "metin": "Yemekten önce ve sonra elleri yıkamak rızkın bereketine sebep olur.",
+            "kaynak": "Tirmizi"
+        },
+        {
+            "id": 2,
+            "metin": "Suyu üç yudumda, oturarak ve sağ el ile içmek.",
+            "kaynak": "Müslim"
+        },
+        {
+            "id": 3,
+            "metin": "Güler yüzlü olmak ve selamı yaymak bir sadakadır.",
+            "kaynak": "Ebû Dâvud"
+        },
+        {
+            "id": 4,
+            "metin": "Sağ tarafa dönerek ve sağ eli yanağın altına koyarak uyumak.",
+            "kaynak": "Buhari"
+        },
+        {
+            "id": 5,
+            "metin": "Ayakkabı giyerken önce sağdan başlamak, çıkarırken önce soldan çıkarmak.",
+            "kaynak": "Müslim"
+        },
+        {
+            "id": 6,
+            "metin": "Yemeği soğutmak için üflememek, soğumasını beklemek.",
+            "kaynak": "Ebû Dâvud"
+        },
+        {
+            "id": 7,
+            "metin": "Misvak kullanmak veya diş temizliğine dikkat etmek.",
+            "kaynak": "Nesâî"
+        },
+        {
+            "id": 8,
+            "metin": "Bir yere girerken ve ayrılırken selam vermek.",
+            "kaynak": "Tirmizi"
+        },
+        {
+            "id": 9,
+            "metin": "Yemek yerken önünden yemek ve tabağı sünnetlemek.",
+            "kaynak": "Buhari"
+        },
+        {
+            "id": 10,
+            "metin": "Hapşırınca 'Elhamdülillah' demek, duyanca 'Yerhamukellah' demek.",
+            "kaynak": "Buhari"
+        },
+        {
+            "id": 11,
+            "metin": "Yolda görülen eziyet verici bir şeyi (taş, diken vb.) kenara kaldırmak.",
+            "kaynak": "Müslim"
+        },
+        {
+            "id": 12,
+            "metin": "Mescide girerken sağ ayakla girmek, çıkarken sol ayakla çıkmak.",
+            "kaynak": "Buhari"
+        },
+        {
+            "id": 13,
+            "metin": "Uyku öncesi abdestli olmak.",
+            "kaynak": "Buhari"
+        },
+        {
+            "id": 14,
+            "metin": "Cuma günü gusletmek ve güzel kokular sürünmek.",
+            "kaynak": "Müslim"
+        },
+        {
+            "id": 15,
+            "metin": "Konuşurken tane tane ve anlaşılır konuşmak.",
+            "kaynak": "Ebû Dâvud"
+        },
+        {
+            "id": 16,
+            "metin": "Hastaları ziyaret etmek ve onlara moral vermek.",
+            "kaynak": "Buhari"
+        },
+        {
+            "id": 17,
+            "metin": "Hediyeleşmek, zira hediye sevgiyi artırır.",
+            "kaynak": "Muvatta"
+        },
+        {
+            "id": 18,
+            "metin": "Otururken sırtı dayayarak değil, daha vakarlı oturmak.",
+            "kaynak": "Tirmizi"
+        },
+        {
+            "id": 19,
+            "metin": "Aksıranın elini ağzına kapaması veya sesini hafifletmesi.",
+            "kaynak": "Ebû Dâvud"
+        },
+        {
+            "id": 20,
+            "metin": "İyiliğe iyilikle karşılık vermek veya dua etmek.",
+            "kaynak": "Tirmizi"
+        },
+        {
+            "id": 21,
+            "metin": "Sofrada yeşillik ve sirke bulundurmak.",
+            "kaynak": "Müslim"
+        },
+        {
+            "id": 22,
+            "metin": "Kıyafet giyerken sağdan başlamak.",
+            "kaynak": "Ebû Dâvud"
+        },
+        {
+            "id": 23,
+            "metin": "Kötü söz söylememek, susmanın faziletine inanmak.",
+            "kaynak": "Buhari"
+        },
+        {
+            "id": 24,
+            "metin": "Misafire ikramda bulunmak.",
+            "kaynak": "Buhari"
+        },
+        {
+            "id": 25,
+            "metin": "Çocukların başını okşamak ve onlara selam vermek.",
+            "kaynak": "Müslim"
+        },
+        {
+            "id": 26,
+            "metin": "Sabah ve akşam zikirlerini ihmal etmemek.",
+            "kaynak": "Ebû Dâvud"
+        },
+        {
+            "id": 27,
+            "metin": "Karanlık çöktüğünde kapıları bismillah diyerek kapamak.",
+            "kaynak": "Buhari"
+        },
+        {
+            "id": 28,
+            "metin": "Ayakta bir şey yememek ve içmemek.",
+            "kaynak": "Müslim"
+        },
+        {
+            "id": 29,
+            "metin": "Gece lambalarını veya ateşi söndürerek uyumak.",
+            "kaynak": "Buhari"
+        },
+        {
+            "id": 30,
+            "metin": "İstişare etmek, yapılacak işlerde fikir almak.",
+            "kaynak": "Tirmizi"
+        }
+    ],
+    "esmalar": [
+        {
+            "id": 1,
+            "isim": "er-RAHMÂN",
+            "anlam": "Dünyada bütün mahlukata merhamet eden."
+        },
+        {
+            "id": 2,
+            "isim": "er-RAHÎM",
+            "anlam": "Ahirette sadece müminlere rahmet eden."
+        },
+        {
+            "id": 3,
+            "isim": "el-MELİK",
+            "anlam": "Mülkün gerçek sahibi, bütün kainatın hükümdarı."
+        },
+        {
+            "id": 4,
+            "isim": "el-KUDDÛS",
+            "anlam": "Her türlü eksiklikten uzak, tertemiz olan."
+        },
+        {
+            "id": 5,
+            "isim": "es-SELÂM",
+            "anlam": "Kullarını selâmete çıkaran, barışın kaynağı."
+        },
+        {
+            "id": 6,
+            "isim": "el-MÜ'MİN",
+            "anlam": "Gönüllerde iman ışığı uyandıran, güven veren."
+        },
+        {
+            "id": 7,
+            "isim": "el-MÜHEYMİN",
+            "anlam": "Her şeyi görüp gözeten, koruyan."
+        },
+        {
+            "id": 8,
+            "isim": "el-AZÎZ",
+            "anlam": "İzzet sahibi, mağlup edilmesi imkansız olan."
+        },
+        {
+            "id": 9,
+            "isim": "el-CEBBÂR",
+            "anlam": "Dilediğini yaptıran, eksikleri tamamlayan."
+        },
+        {
+            "id": 10,
+            "isim": "el-MÜTEKEBBİR",
+            "anlam": "Büyüklükte eşi benzeri olmayan."
+        },
+        {
+            "id": 11,
+            "isim": "el-HÂLIK",
+            "anlam": "Her şeyi yoktan var eden, yaratan."
+        },
+        {
+            "id": 12,
+            "isim": "el-BÂRİ",
+            "anlam": "Her şeyi kusursuz ve uyumlu yaratan."
+        },
+        {
+            "id": 13,
+            "isim": "el-MUSAVVİR",
+            "anlam": "Varlıklara şekil ve özellik veren."
+        },
+        {
+            "id": 14,
+            "isim": "el-GAFFÂR",
+            "anlam": "Günahları çokça bağışlayan."
+        },
+        {
+            "id": 15,
+            "isim": "el-KAHHÂR",
+            "anlam": "Her şeye galip gelen, mutlak hakim."
+        },
+        {
+            "id": 16,
+            "isim": "el-VEHHÂB",
+            "anlam": "Karşılıksız bolca veren."
+        },
+        {
+            "id": 17,
+            "isim": "er-REZZÂK",
+            "anlam": "Rızık veren, rızka kefil olan."
+        },
+        {
+            "id": 18,
+            "isim": "el-FETTÂH",
+            "anlam": "Kapıları açan, her türlü müşkülü çözen."
+        },
+        {
+            "id": 19,
+            "isim": "el-ALÎM",
+            "anlam": "Her şeyi en ince detayına kadar bilen."
+        },
+        {
+            "id": 20,
+            "isim": "el-KÂBID",
+            "anlam": "Dilediğine rızkı daraltan, ruhları kabzeden."
+        },
+        {
+            "id": 21,
+            "isim": "el-BÂSIT",
+            "anlam": "Dilediğine rızkı açan, genişleten."
+        },
+        {
+            "id": 22,
+            "isim": "el-HÂFID",
+            "anlam": "Dereceleri alçaltan, kibirlileri düşüren."
+        },
+        {
+            "id": 23,
+            "isim": "er-RÂFİ",
+            "anlam": "Dereceleri yükselten, müminleri aziz kılan."
+        },
+        {
+            "id": 24,
+            "isim": "el-MUİZZ",
+            "anlam": "İzzet veren, ağırlayan."
+        },
+        {
+            "id": 25,
+            "isim": "el-MÜZİLL",
+            "anlam": "Zelil kılan, değersiz eden."
+        },
+        {
+            "id": 26,
+            "isim": "es-SEMÎ",
+            "anlam": "Her şeyi en iyi işiten."
+        },
+        {
+            "id": 27,
+            "isim": "el-BASÎR",
+            "anlam": "Her şeyi en iyi gören."
+        },
+        {
+            "id": 28,
+            "isim": "el-HAKEM",
+            "anlam": "Mutlak hakim, hakkı batıldan ayıran."
+        },
+        {
+            "id": 29,
+            "isim": "el-ADL",
+            "anlam": "Mutlak adalet sahibi."
+        },
+        {
+            "id": 30,
+            "isim": "el-LATÎF",
+            "anlam": "Lütuf sahibi, her şeye nüfuz eden."
+        }
+    ]
+}

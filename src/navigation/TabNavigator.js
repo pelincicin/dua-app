@@ -1,6 +1,7 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Animated, Platform, StyleSheet } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context'; // Sistemsel boşluk için
 
 // Tema context'ini çekiyoruz
 import { useTheme } from '../context/ThemeContext';
@@ -12,41 +13,35 @@ import Zikirmatik from '../screens/Zikirmatik';
 const Tab = createBottomTabNavigator();
 
 export default function TabNavigator() {
-    // Global temayı kullanıyoruz
-    const { theme, isDarkMode } = useTheme();
+    const { theme } = useTheme();
+    const insets = useSafeAreaInsets(); // Telefonun altındaki boşluğu milimetrik hesaplar
 
     return (
         <Tab.Navigator
             screenOptions={({ route }) => ({
-                headerShown: true,
-                // Başlık alanını temaya göre boyuyoruz
-                headerStyle: {
-                    backgroundColor: theme.bg,
-                    elevation: 0,
-                    shadowOpacity: 0,
-                    borderBottomWidth: 1,
-                    borderBottomColor: theme.border,
-                },
-                headerTitleStyle: {
-                    fontWeight: '900',
-                    fontSize: 20,
-                    color: theme.text,
-                },
-
-                // Menü renklerini temaya göre boyuyoruz
-                tabBarActiveTintColor: theme.active, // #2D6A4F
+                headerShown: false,
+                tabBarHideOnKeyboard: true,
+                tabBarActiveTintColor: theme.active,
                 tabBarInactiveTintColor: theme.subText,
-                tabBarStyle: [
-                    styles.tabBar,
-                    {
-                        backgroundColor: theme.card,
-                        borderTopColor: theme.border
-                    }
-                ],
-                tabBarLabelStyle: styles.tabBarLabel,
 
-                // Sayfa geçiş animasyonu
-                animation: 'fade',
+                tabBarStyle: {
+                    backgroundColor: theme.card,
+                    borderTopColor: theme.border,
+                    borderTopWidth: 1,
+                    elevation: 20,
+                    // Alt boşluğu telefonun kendi sistem boşluğuna göre ayarlar
+                    // Eğer sistem boşluğu yoksa (eski tel), manuel 20px verir
+                    height: Platform.OS === 'ios' ? 85 : 65 + (insets.bottom > 0 ? insets.bottom : 15),
+                    paddingBottom: Platform.OS === 'ios' ? insets.bottom : (insets.bottom > 0 ? insets.bottom : 15),
+                    paddingTop: 10,
+                },
+
+                tabBarLabelStyle: {
+                    fontSize: 11,
+                    fontWeight: '800',
+                    // Yazıyı Android navigasyon çubuğundan uzak tutmak için
+                    marginBottom: Platform.OS === 'android' ? 5 : 0,
+                },
 
                 tabBarIcon: ({ focused, color }) => {
                     let iconName;
@@ -62,47 +57,14 @@ export default function TabNavigator() {
                 },
             })}
         >
-            <Tab.Screen
-                name="Ana Sayfa"
-                component={AnaSayfa}
-                options={{
-                    headerShown: false,
-                    title: 'Ana Sayfa',
-                }}
-            />
-            <Tab.Screen
-                name="Dualar"
-                component={Dualar}
-                options={{
-                    headerShown: false,
-                    title: 'Dualar',
-                }}
-            />
-            <Tab.Screen
-                name="Zikirmatik"
-                component={Zikirmatik}
-                options={{
-                    headerShown: false,
-                    title: 'Zikirmatik'
-                }}
-            />
+            <Tab.Screen name="Ana Sayfa" component={AnaSayfa} />
+            <Tab.Screen name="Dualar" component={Dualar} />
+            <Tab.Screen name="Zikirmatik" component={Zikirmatik} />
         </Tab.Navigator>
     );
 }
 
 const styles = StyleSheet.create({
-    tabBar: {
-        height: Platform.OS === 'ios' ? 90 : 70,
-        paddingBottom: Platform.OS === 'ios' ? 30 : 12,
-        paddingTop: 10,
-        borderTopWidth: 1,
-        elevation: 0,
-    },
-    tabBarLabel: {
-        fontSize: 12,
-        fontWeight: '700',
-        marginTop: 2,
-    },
     activeIconAnimation: {
         transform: [{ scale: 1.1 }, { translateY: -2 }],
     }
