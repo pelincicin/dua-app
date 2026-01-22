@@ -8,79 +8,79 @@
                 {
                     "id": 101,
                     "title": "Fatiha Suresi",
-                    "meaning": "Hamd, Alemlerin Rabbi olan Allah'adır.",
-                    "arabic": "بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ ﴿١﴾ اَلْحَمْدُ لِلّٰهِ رَبِّ الْعَالَم۪ينَۙ ﴿٢﴾",
-                    "pronunciation": "Elhamdü lillâhi rabbil'alemin. Errahmânirrahîm. Mâliki yevmiddîn..."
+                    "meaning": "Hamd, âlemlerin Rabbi Allah’a mahsustur. O, Rahmân ve Rahîm’dir. Din gününün sahibidir. Yalnız Sana ibadet eder, yalnız Senden yardım dileriz. Bizi dosdoğru yola ilet; kendilerine nimet verdiklerinin yoluna, gazaba uğrayanların ve sapmışların yoluna değil.",
+                    "arabic": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ ۝ الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ ۝ الرَّحْمَٰنِ الرَّحِيمِ ۝ مَالِكِ يَوْمِ الدِّينِ ۝ إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ ۝ اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ ۝ صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
+                    "pronunciation": "Bismillâhirrahmânirrahîm. Elhamdü lillâhi rabbil âlemîn. Errahmânirrahîm. Mâliki yevmiddîn. İyyâke na‘budu ve iyyâke neste‘în. İhdinas sırâtal müstakîm. Sırâtallezîne en‘amte aleyhim ğayril mağdûbi aleyhim ve leddâllîn."
                 },
                 {
                     "id": 102,
                     "title": "Fil Suresi",
-                    "meaning": "Rabbinin fil sahiplerine ne yaptığını görmedin mi?",
-                    "arabic": "اَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِاَصْحَابِ الْف۪يلِۜ",
-                    "pronunciation": "Elem tera keyfe feale rabbüke bi ashâbil fîl..."
+                    "meaning": "Rabbin fil sahiplerine ne yaptı görmedin mi? Onların tuzaklarını boşa çıkarmadı mı? Üzerlerine sürü sürü kuşlar gönderdi. Onlara pişmiş çamurdan taşlar atıyorlardı. Böylece onları yenilmiş ekin yaprağı gibi yaptı.",
+                    "arabic": "أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِأَصْحَابِ الْفِيلِ ۝ أَلَمْ يَجْعَلْ كَيْدَهُمْ فِي تَضْلِيلٍ ۝ وَأَرْسَلَ عَلَيْهِمْ طَيْرًا أَبَابِيلَ ۝ تَرْمِيهِمْ بِحِجَارَةٍ مِنْ سِجِّيلٍ ۝ فَجَعَلَهُمْ كَعَصْفٍ مَأْكُولٍ",
+                    "pronunciation": "Elem tera keyfe fe‘ale rabbüke bi-ashâbil fîl. Elem yec‘al keydehüm fî tadlîl. Ve ersele aleyhim tayran ebâbîl. Termîhim bi-hicâratin min siccîl. Fe ce‘alehüm ke‘asfin me’kûl."
                 },
                 {
                     "id": 103,
                     "title": "Kureyş Suresi",
-                    "meaning": "Kureyş'i alıştırdığı için...",
-                    "arabic": "لِا۪يلَافِ قُرَيْشٍۙ",
-                    "pronunciation": "Li îlâfi kureyş. Îlâfihim rihleteşşitâi vessayf..."
+                    "meaning": "Kureyş’in emniyetini sağladığı, onları kış ve yaz yolculuğuna alıştırdığı için; bu evin Rabbine kulluk etsinler. O ki onları açlıktan doyurdu ve korkudan emin kıldı.",
+                    "arabic": "لِإِيلَافِ قُرَيْشٍ ۝ إِيلَافِهِمْ رِحْلَةَ الشِّتَاءِ وَالصَّيْفِ ۝ فَلْيَعْبُدُوا رَبَّ هَٰذَا الْبَيْتِ ۝ الَّذِي أَطْعَمَهُمْ مِنْ جُوعٍ وَآمَنَهُمْ مِنْ خَوْفٍ",
+                    "pronunciation": "Li-îlâfi kureyş. Îlâfihim rihletes şitâi ves sayf. Felya‘budû rabbe hâzel beyt. Ellezî at‘amehüm min cû‘iv ve âmenehüm min havf."
                 },
                 {
                     "id": 104,
-                    "title": "Mâûn Suresi",
-                    "meaning": "Dini yalanlayanı gördün mü?",
-                    "arabic": "اَرَاَيْتَ الَّذ۪ي يُكَذِّبُ بِالدّ۪ينِۜ",
-                    "pronunciation": "Eraeytellezî yükezzibü biddîn. Fezâlikellezî yedü'ul yetîm..."
+                    "title": "Maun Suresi",
+                    "meaning": "Dini yalanlayanı gördün mü? İşte o, yetimi iter kakar. Yoksulu doyurmaya teşvik etmez. Yazıklar olsun o namaz kılanlara ki, namazlarını ciddiye almazlar. Onlar gösteriş yaparlar ve en küçük yardımı bile esirgerler.",
+                    "arabic": "أَرَأَيْتَ الَّذِي يُكَذِّبُ بِالدِّينِ ۝ فَذَٰلِكَ الَّذِي يَدُعُّ الْيَتِيمَ ۝ وَلَا يَحُضُّ عَلَىٰ طَعَامِ الْمِسْكِينِ ۝ فَوَيْلٌ لِلْمُصَلِّينَ ۝ الَّذِينَ هُمْ عَنْ صَلَاتِهِمْ سَاهُونَ ۝ الَّذِينَ هُمْ يُرَاءُونَ ۝ وَيَمْنَعُونَ الْمَاعُونَ",
+                    "pronunciation": "Eraeytellezî yükezzibü biddîn. Fezâlikellezî yedu‘‘ul yetîm. Ve lâ yehuddu alâ ta‘âmil miskîn. Fe veylün lil musallîn. Ellezîne hüm an salâtihim sâhûn. Ellezîne hüm yürâûn. Ve yemne‘ûnel mâ‘ûn."
                 },
                 {
                     "id": 105,
                     "title": "Kevser Suresi",
-                    "meaning": "Şüphesiz biz sana Kevser'i verdik.",
-                    "arabic": "اِنَّٓا اَعْطَيْنَاكَ الْكَوْثَرَۜ",
-                    "pronunciation": "İnnâ a'taynâkel kevser. Fesalli lirabbike venhar..."
+                    "meaning": "Şüphesiz biz sana Kevser’i verdik. O hâlde Rabbin için namaz kıl ve kurban kes. Asıl soyu kesik olan, sana kin tutandır.",
+                    "arabic": "إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ ۝ فَصَلِّ لِرَبِّكَ وَانْحَرْ ۝ إِنَّ شَانِئَكَ هُوَ الْأَبْتَرُ",
+                    "pronunciation": "İnnâ a‘taynake’l-kevser. Fe salli li rabbike venhar. İnne şâni’eke hüvel ebter."
                 },
                 {
                     "id": 106,
-                    "title": "Kâfirûn Suresi",
-                    "meaning": "De ki: Ey Kafirler!",
-                    "arabic": "قُلْ يَٓا اَيُّهَا الْكَافِرُونَۙ",
-                    "pronunciation": "Kul yâ eyyühel kâfirûn. Lâ a'büdü mâ ta'büdûn..."
+                    "title": "Kafirun Suresi",
+                    "meaning": "De ki: Ey kâfirler! Ben sizin taptıklarınıza tapmam. Siz de benim taptığıma tapmazsınız. Ben sizin taptıklarınıza tapacak değilim. Siz de benim taptığıma tapacak değilsiniz. Sizin dininiz size, benim dinim bana.",
+                    "arabic": "قُلْ يَا أَيُّهَا الْكَافِرُونَ ۝ لَا أَعْبُدُ مَا تَعْبُدُونَ ۝ وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ ۝ وَلَا أَنَا عَابِدٌ مَا عَبَدْتُمْ ۝ وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ ۝ لَكُمْ دِينُكُمْ وَلِيَ دِينِ",
+                    "pronunciation": "Kul yâ eyyühel kâfirûn. Lâ a‘budu mâ ta‘budûn. Ve lâ entüm âbidûne mâ a‘bud. Ve lâ ene âbidün mâ abedtüm. Ve lâ entüm âbidûne mâ a‘bud. Leküm dînüküm ve liye dîn."
                 },
                 {
                     "id": 107,
                     "title": "Nasr Suresi",
-                    "meaning": "Allah'ın yardımı ve fetih geldiği zaman...",
-                    "arabic": "اِذَا جَٓاءَ نَصْرُ اللّٰهِ وَالْفَتْحُۙ",
-                    "pronunciation": "İzâ câe nasrullâhi velfeth. Veraeytennâse yedhulûne..."
+                    "meaning": "Allah’ın yardımı ve fetih geldiğinde; insanların Allah’ın dinine dalga dalga girdiklerini gördüğünde; Rabbini hamd ile tesbih et ve O’ndan bağışlanma dile. Çünkü O, tövbeleri kabul edendir.",
+                    "arabic": "إِذَا جَاءَ نَصْرُ اللَّهِ وَالْفَتْحُ ۝ وَرَأَيْتَ النَّاسَ يَدْخُلُونَ فِي دِينِ اللَّهِ أَفْوَاجًا ۝ فَسَبِّحْ بِحَمْدِ رَبِّكَ وَاسْتَغْفِرْهُ ۝ إِنَّهُ كَانَ تَوَّابًا",
+                    "pronunciation": "İzâ câe nasrullâhi vel feth. Ve raeyten nâse yedhulûne fî dînillâhi efvâcâ. Fe sebbih bi hamdi rabbike vestagfirh. İnnehû kâne tevvâbâ."
                 },
                 {
                     "id": 108,
                     "title": "Tebbet Suresi",
-                    "meaning": "Ebu Leheb'in elleri kurusun!",
-                    "arabic": "تَبَّتْ يَدَٓا اَب۪ي لَهَبٍ وَتَبَّۜ",
-                    "pronunciation": "Tebbet yedâ ebî lehebin ve tebbe. Mâ ağnâ anhü mâlühû..."
+                    "meaning": "Ebu Leheb’in elleri kurusun, kurudu da. Malı ve kazandıkları ona fayda vermedi. Alevli bir ateşe girecektir. Karısı da odun taşıyıcı olarak; boynunda liften bir ip olduğu hâlde.",
+                    "arabic": "تَبَّتْ يَدَا أَبِي لَهَبٍ وَتَبَّ ۝ مَا أَغْنَىٰ عَنْهُ مَالُهُ وَمَا كَسَبَ ۝ سَيَصْلَىٰ نَارًا ذَاتَ لَهَبٍ ۝ وَامْرَأَتُهُ حَمَّالَةَ الْحَطَبِ ۝ فِي جِيدِهَا حَبْلٌ مِنْ مَسَدٍ",
+                    "pronunciation": "Tebbet yedâ ebî lehebin ve tebb. Mâ eğnâ anhu mâlühû ve mâ keseb. Se yaslâ nâran zâte leheb. Vemraetühû hammâletel hatab. Fî cîdihâ hablün min mesed."
                 },
                 {
                     "id": 109,
-                    "title": "İhlâs Suresi",
-                    "meaning": "De ki: O Allah tektir.",
-                    "arabic": "قُلْ هُوَ اللّٰهُ اَحَدٌۚ",
-                    "pronunciation": "Kul hüvellâhü ehad. Allâhüssamed. Lem yelid ve lem yûled..."
+                    "title": "İhlas Suresi",
+                    "meaning": "De ki: O Allah birdir. Allah sameddir. Doğurmamış ve doğurulmamıştır. Hiçbir şey O’na denk değildir.",
+                    "arabic": "قُلْ هُوَ اللَّهُ أَحَدٌ ۝ اللَّهُ الصَّمَدُ ۝ لَمْ يَلِدْ وَلَمْ يُولَدْ ۝ وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ",
+                    "pronunciation": "Kul hüvallâhü ehad. Allâhüs samed. Lem yelid ve lem yûled. Ve lem yekün lehû küfüven ehad."
                 },
                 {
                     "id": 110,
                     "title": "Felak Suresi",
-                    "meaning": "De ki: Sabahın Rabbine sığınırım.",
-                    "arabic": "قُلْ اَعُوذُ بِرَبِّ الْفَلَقِۙ",
-                    "pronunciation": "Kul eûzü birabbil felak. Min şerri mâ halak..."
+                    "meaning": "De ki: Yarattıklarının şerrinden, karanlığı çöktüğü zaman gecenin şerrinden, düğümlere üfleyenlerin şerrinden ve haset ettiği zaman hasetçinin şerrinden sabahın Rabbine sığınırım.",
+                    "arabic": "قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ ۝ مِنْ شَرِّ مَا خَلَقَ ۝ وَمِنْ شَرِّ غَاسِقٍ إِذَا وَقَبَ ۝ وَمِنْ شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ ۝ وَمِنْ شَرِّ حَاسِدٍ إِذَا حَسَدَ",
+                    "pronunciation": "Kul e‘ûzü bi rabbil felak. Min şerri mâ halak. Ve min şerri ğâsikın izâ vakab. Ve min şerrin neffâsâti fil ukad. Ve min şerri hâsidin izâ hased."
                 },
                 {
                     "id": 111,
-                    "title": "Nâs Suresi",
-                    "meaning": "De ki: İnsanların Rabbine sığınırım.",
-                    "arabic": "قُلْ اَعُوذُ بِرَبِّ النَّاسِۙ",
-                    "pronunciation": "Kul eûzü birabbinnâsi melikinnâsi ilâhinnâs..."
+                    "title": "Nas Suresi",
+                    "meaning": "De ki: İnsanların Rabbine, insanların Melikine, insanların İlâhına; vesvese veren o sinsi şeytanın şerrinden sığınırım. O ki insanların göğüslerine vesvese verir; gerek cinlerden gerek insanlardan.",
+                    "arabic": "قُلْ أَعُوذُ بِرَبِّ النَّاسِ ۝ مَلِكِ النَّاسِ ۝ إِلَٰهِ النَّاسِ ۝ مِنْ شَرِّ الْوَسْوَاسِ الْخَنَّاسِ ۝ الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ ۝ مِنَ الْجِنَّةِ وَالنَّاسِ",
+                    "pronunciation": "Kul e‘ûzü bi rabbin nâs. Melikin nâs. İlâhin nâs. Min şerril vesvâsil hannâs. Ellezî yüvesvisü fî sudûrin nâs. Minel cinneti ven nâs."
                 }
             ]
         },
@@ -91,38 +91,45 @@
             "prayers": [
                 {
                     "id": 201,
-                    "title": "Sübhaneke",
-                    "meaning": "Allah'ım! Seni eksikliklerden tenzih ederim.",
-                    "arabic": "سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ...",
-                    "pronunciation": "Sübhânekellâhümme ve bihamdik..."
+                    "title": "Sübhaneke Duası",
+                    "meaning": "Allah’ım! Sen her türlü eksiklikten uzaksın. Seni hamdinle tesbih ederim. Senin adın mübarektir. Şanın yücedir. Senden başka ilah yoktur.",
+                    "arabic": "سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ وَتَبَارَكَ اسْمُكَ وَتَعَالَىٰ جَدُّكَ وَلَا إِلَٰهَ غَيْرُكَ",
+                    "pronunciation": "Sübhâneke allâhümme ve bihamdik. Ve tebârekesmük. Ve teâlâ ceddük. Ve lâ ilâhe ğayrük."
                 },
                 {
                     "id": 202,
-                    "title": "Ettehiyyâtü",
-                    "meaning": "Bütün selamlar, dualar Allah'adır.",
-                    "arabic": "اَلتَّحِيَّاتُ لِلّٰهِ وَالصَّلَوَاتُ...",
-                    "pronunciation": "Ettehiyyâtü lillâhi vessalevâtü vettayyibât..."
+                    "title": "Ettehiyyatü Duası",
+                    "meaning": "Dil ile, beden ile ve mal ile yapılan bütün ibadetler Allah’a mahsustur. Ey Peygamber! Allah’ın selâmı, rahmeti ve bereketi senin üzerine olsun. Selâm bize ve Allah’ın salih kullarının üzerine olsun. Şahitlik ederim ki Allah’tan başka ilah yoktur. Yine şahitlik ederim ki Muhammed O’nun kulu ve elçisidir.",
+                    "arabic": "اَلتَّحِيَّاتُ لِلّٰهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، اَلسَّلَامُ عَلَيْكَ اَيُّهَا النَّبِيُّ وَرَحْمَةُ اللّٰهِ وَبَرَكَاتُهُ، اَلسَّلَامُ عَلَيْنَا وَعَلٰى عِبَادِ اللّٰهِ الصَّالِحِينَ، اَشْهَدُ اَنْ لَا اِلٰهَ اِلَّا اللّٰهُ وَاَشْهَدُ اَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
+                    "pronunciation": "Ettehiyyâtü lillâhi ves salavâtü vet tayyibât. Esselâmü aleyke eyyühen nebiyyü ve rahmetullâhi ve berakâtüh. Esselâmü aleynâ ve alâ ibâdillâhis sâlihîn. Eşhedü en lâ ilâhe illallâh ve eşhedü enne Muhammeden abdühû ve resûlüh."
                 },
                 {
                     "id": 203,
-                    "title": "Salli-Bârik",
-                    "meaning": "Allah'ım! Muhammed'e salat eyle.",
-                    "arabic": "اَللّٰهُمَّ صَلِّ عَلٰى مُحَمَّدٍ...",
-                    "pronunciation": "Allâhümme salli alâ Muhammedin ve alâ âli Muhammed..."
+                    "title": "Salli Duası",
+                    "meaning": "Allah’ım! Muhammed’e ve Muhammed’in ailesine rahmet eyle. Sen İbrahim’e ve İbrahim’in ailesine rahmet ettiğin gibi. Şüphesiz Sen övülmeye layık ve yücesin.",
+                    "arabic": "اَللّٰهُمَّ صَلِّ عَلٰى مُحَمَّدٍ وَعَلٰى اٰلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلٰى اِبْرَاهِيمَ وَعَلٰى اٰلِ اِبْرَاهِيمَ اِنَّكَ حَمِيدٌ مَجِيدٌ",
+                    "pronunciation": "Allâhümme salli alâ Muhammedin ve alâ âli Muhammed. Kemâ salleyte alâ İbrâhîme ve alâ âli İbrâhîm. İnneke hamîdün mecîd."
                 },
                 {
                     "id": 204,
-                    "title": "Rabbena Duaları",
-                    "meaning": "Rabbimiz! Bize dünyada da ahirette de iyilik ver.",
-                    "arabic": "رَبَّنَٓا اٰتِنَا فِي الدُّنْيَا حَسَنَةً...",
-                    "pronunciation": "Rabbenâ âtinâ fiddünyâ haseneten ve fil âhirati haseneten..."
+                    "title": "Barik Duası",
+                    "meaning": "Allah’ım! Muhammed’e ve Muhammed’in ailesine bereket ver. Sen İbrahim’e ve İbrahim’in ailesine bereket verdiğin gibi. Şüphesiz Sen övülmeye layık ve yücesin.",
+                    "arabic": "اَللّٰهُمَّ بَارِكْ عَلٰى مُحَمَّدٍ وَعَلٰى اٰلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلٰى اِبْرَاهِيمَ وَعَلٰى اٰلِ اِبْرَاهِيمَ اِنَّكَ حَمِيدٌ مَجِيدٌ",
+                    "pronunciation": "Allâhümme bârik alâ Muhammedin ve alâ âli Muhammed. Kemâ bârekte alâ İbrâhîme ve alâ âli İbrâhîm. İnneke hamîdün mecîd."
                 },
                 {
                     "id": 205,
-                    "title": "Kunut Duaları",
-                    "meaning": "Allah'ım! Senden yardım dileriz.",
-                    "arabic": "اَللّٰهُمَّ اِنَّا نَسْتَع۪ينُكَ...",
-                    "pronunciation": "Allâhümme innâ nesteînüke ve nestağfirüke..."
+                    "title": "Rabbena Atina Duası",
+                    "meaning": "Rabbimiz! Bize dünyada da iyilik ver, ahirette de iyilik ver ve bizi ateş azabından koru.",
+                    "arabic": "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْاٰخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ",
+                    "pronunciation": "Rabbenâ âtinâ fid dünyâ haseneten ve fil âhireti haseneten ve kınâ azâben nâr."
+                },
+                {
+                    "id": 206,
+                    "title": "Rabbenağfirli Duası",
+                    "meaning": "Rabbimiz! Hesap görülecek günde beni, anne babamı ve bütün müminleri bağışla.",
+                    "arabic": "رَبَّنَا اغْفِرْ لِي وَلِوَالِدَيَّ وَلِلْمُؤْمِنِينَ يَوْمَ يَقُومُ الْحِسَابُ",
+                    "pronunciation": "Rabbenâğfir lî ve li-vâlideyye ve lil mü’minîne yevme yekûmül hisâb."
                 }
             ]
         },
@@ -133,38 +140,108 @@
             "prayers": [
                 {
                     "id": 301,
-                    "title": "Sabah Duası",
-                    "meaning": "Bizi öldürdükten sonra dirilten Allah'a hamdolsun.",
-                    "arabic": "اَلْحَمْدُ لِلّٰهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا",
-                    "pronunciation": "Elhamdülillâhillezi ahyânâ ba'de mâ emâtenâ..."
+                    "title": "Uyanınca Okunan Dua",
+                    "meaning": "Bizi öldükten sonra dirilten Allah’a hamdolsun. Dönüş yalnız O’nadır.",
+                    "arabic": "اَلْحَمْدُ لِلّٰهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ",
+                    "pronunciation": "Elhamdü lillâhillezî ahyânâ ba‘de mâ emâtenâ ve ileyhin nüshûr."
                 },
                 {
                     "id": 302,
-                    "title": "Akşam Duası",
-                    "meaning": "Mülk Allah'ın olduğu halde akşama erdik.",
-                    "arabic": "أَمْسَيْنَا وَأَمْسَى الْمُلْكُ لِلَّهِ",
-                    "pronunciation": "Emseynâ ve emsel mülkü lillâh..."
+                    "title": "Yatarken Okunan Dua",
+                    "meaning": "Allah’ım! Senin adınla yatarım, Senin adınla kalkarım. Ruhumu alırsan ona rahmet et, bırakırsan salih kullarını koruduğun gibi onu da koru.",
+                    "arabic": "اَللّٰهُمَّ بِاسْمِكَ أَمُوتُ وَأَحْيَا",
+                    "pronunciation": "Allâhümme bismike emûtü ve ahyâ."
                 },
                 {
                     "id": 303,
-                    "title": "Yemek Duası",
-                    "meaning": "Bizi doyuran Allah'a hamdolsun.",
-                    "arabic": "اَلْحَمْدُ لِلّٰهِ الَّذ۪ي اَطْعَمَنَا...",
-                    "pronunciation": "Elhamdülillâhillezî et'amenâ..."
+                    "title": "Tuvalete Girerken Okunan Dua",
+                    "meaning": "Allah’ım! Pislikten ve şeytanlardan Sana sığınırım.",
+                    "arabic": "اَللّٰهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْخُبُثِ وَالْخَبَائِثِ",
+                    "pronunciation": "Allâhümme innî e‘ûzü bike minel hubüsi vel habâis."
                 },
                 {
                     "id": 304,
-                    "title": "Aynaya Bakarken",
-                    "meaning": "Allah'ım! Yaratılışımı güzel kıldığın gibi ahlakımı da güzelleştir.",
-                    "arabic": "اَللّٰهُمَّ كَمَا حَسَّنْتَ خَلْقِي فَحَسِّنْ خُلُقِي",
-                    "pronunciation": "Allâhümme kemâ hassente halkî fehassin hulukî."
+                    "title": "Tuvaletten Çıkarken Okunan Dua",
+                    "meaning": "Bağışlamanı dilerim Allah’ım.",
+                    "arabic": "غُفْرَانَكَ",
+                    "pronunciation": "Ğufrânek."
                 },
                 {
                     "id": 305,
-                    "title": "Evden Çıkarken",
-                    "meaning": "Allah'ın adıyla, Allah'a güvendim.",
-                    "arabic": "بِسْمِ اللهِ تَوَكَّلْتُ عَلَى اللهِ",
-                    "pronunciation": "Bismillâhi tevekkeltü alallâh."
+                    "title": "Abdeste Başlarken Okunan Dua",
+                    "meaning": "Allah’ım! Beni tövbe edenlerden ve temizlenenlerden eyle.",
+                    "arabic": "اَللّٰهُمَّ اجْعَلْنِي مِنَ التَّوَّابِينَ وَاجْعَلْنِي مِنَ الْمُتَطَهِّرِينَ",
+                    "pronunciation": "Allâhümme’c‘alnî minet tevvâbîn vec‘alnî minel mütetahhirîn."
+                },
+                {
+                    "id": 306,
+                    "title": "Evden Çıkarken Okunan Dua",
+                    "meaning": "Allah’ın adıyla çıktım. Allah’a tevekkül ettim. Güç ve kuvvet ancak Allah iledir.",
+                    "arabic": "بِسْمِ اللّٰهِ تَوَكَّلْتُ عَلَى اللّٰهِ لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللّٰهِ",
+                    "pronunciation": "Bismillâhi tevekkeltü alallâh. Lâ havle ve lâ kuvvete illâ billâh."
+                },
+                {
+                    "id": 307,
+                    "title": "Eve Girerken Okunan Dua",
+                    "meaning": "Allah’ım! Girişimizin de çıkışımızın da hayırlısını nasip et.",
+                    "arabic": "اَللّٰهُمَّ إِنِّي أَسْأَلُكَ خَيْرَ الْمَوْلِجِ وَخَيْرَ الْمَخْرَجِ",
+                    "pronunciation": "Allâhümme innî es’elüke hayrel mevlîci ve hayrel mahrac."
+                },
+                {
+                    "id": 308,
+                    "title": "Yemekten Önce Okunan Dua",
+                    "meaning": "Allah’ın adıyla.",
+                    "arabic": "بِسْمِ اللّٰهِ",
+                    "pronunciation": "Bismillâh."
+                },
+                {
+                    "id": 309,
+                    "title": "Yemekten Sonra Okunan Dua",
+                    "meaning": "Bize yediren, içiren ve bizi Müslümanlardan kılan Allah’a hamdolsun.",
+                    "arabic": "اَلْحَمْدُ لِلّٰهِ الَّذِي أَطْعَمَنَا وَسَقَانَا وَجَعَلَنَا مِنَ الْمُسْلِمِينَ",
+                    "pronunciation": "Elhamdü lillâhillezî at‘amenâ ve sekânâ ve ce‘alenâ minel müslimîn."
+                },
+                {
+                    "id": 310,
+                    "title": "Mescide Girerken Okunan Dua",
+                    "meaning": "Allah’ım! Rahmet kapılarını bana aç.",
+                    "arabic": "اَللّٰهُمَّ افْتَحْ لِي أَبْوَابَ رَحْمَتِكَ",
+                    "pronunciation": "Allâhümme’ftah lî ebvâbe rahmetik."
+                },
+                {
+                    "id": 311,
+                    "title": "Mescidden Çıkarken Okunan Dua",
+                    "meaning": "Allah’ım! Lütfundan bana nasip eyle.",
+                    "arabic": "اَللّٰهُمَّ إِنِّي أَسْأَلُكَ مِنْ فَضْلِكَ",
+                    "pronunciation": "Allâhümme innî es’elüke min fadlik."
+                },
+                {
+                    "id": 312,
+                    "title": "Yolculuğa Çıkarken Okunan Dua",
+                    "meaning": "Bu yolculuğumuzda bize iyilik ve takva nasip et. Bizden razı olacağın amelleri kolaylaştır.",
+                    "arabic": "اَللّٰهُمَّ إِنَّا نَسْأَلُكَ فِي سَفَرِنَا هَذَا الْبِرَّ وَالتَّقْوَى",
+                    "pronunciation": "Allâhümme innâ nes’elüke fî seferinâ hâzel birra vet takvâ."
+                },
+                {
+                    "id": 313,
+                    "title": "Korku ve Sıkıntı Anında Okunan Dua",
+                    "meaning": "Allah bana yeter. O ne güzel vekildir.",
+                    "arabic": "حَسْبُنَا اللّٰهُ وَنِعْمَ الْوَكِيلُ",
+                    "pronunciation": "Hasbunallâhü ve ni‘mel vekîl."
+                },
+                {
+                    "id": 314,
+                    "title": "Hastalıkta Okunan Dua",
+                    "meaning": "Ey insanların Rabbi! Hastalığı gider, şifa ver. Şifa veren yalnız Sensin.",
+                    "arabic": "اَللّٰهُمَّ اشْفِ أَنْتَ الشَّافِي لَا شِفَاءَ إِلَّا شِفَاؤُكَ",
+                    "pronunciation": "Allâhümme’şfi enteş şâfî lâ şifâe illâ şifâük."
+                },
+                {
+                    "id": 315,
+                    "title": "Yağmur Yağarken Okunan Dua",
+                    "meaning": "Allah’ım! Bunu faydalı bir yağmur kıl.",
+                    "arabic": "اَللّٰهُمَّ صَيِّبًا نَافِعًا",
+                    "pronunciation": "Allâhümme sayyiben nâfi‘â."
                 }
             ]
         },
@@ -175,24 +252,430 @@
             "prayers": [
                 {
                     "id": 401,
-                    "title": "Ayetel Kürsi",
-                    "meaning": "Allah, O'ndan başka ilah yoktur.",
-                    "arabic": "اَللّٰهُ لَٓا اِلٰهَ اِلَّا هُوَ الْحَيُّ الْقَيُّومُۚ",
-                    "pronunciation": "Allâhü lâ ilâhe illâ hüvel hayyül kayyûm..."
+                    "title": "Şifa Duası (Genel)",
+                    "meaning": "Allah’ım! Ey insanların Rabbi! Hastalığı gider, şifa ver. Şifa veren yalnız Sensin. Senin şifandan başka şifa yoktur. Öyle bir şifa ver ki, geride hastalık bırakmasın.",
+                    "arabic": "اَللّٰهُمَّ رَبَّ النَّاسِ أَذْهِبِ الْبَأْسَ اشْفِ أَنْتَ الشَّافِي لَا شِفَاءَ إِلَّا شِفَاؤُكَ شِفَاءً لَا يُغَادِرُ سَقَمًا",
+                    "pronunciation": "Allâhümme rabben nâs, ezhibi’l-be’s, işfi enteş şâfî. Lâ şifâe illâ şifâük, şifâen lâ yugâdiru sekamâ."
                 },
                 {
                     "id": 402,
-                    "title": "Nazar Duası",
-                    "meaning": "İnkâr edenler seni neredeyse gözleriyle devireceklerdi.",
-                    "arabic": "وَإِن يَكَادُ الَّذِينَ كَفَرُوا لَيُزْلِقُونَكَ...",
-                    "pronunciation": "Ve in yekâdüllezîne keferû leyüzlikûneke..."
+                    "title": "Ayetel Kürsi",
+                    "meaning": "Allah, kendisinden başka ilah olmayandır. Diridir, kayyumdur. O’nu ne uyuklama tutar ne uyku. Göklerde ve yerde ne varsa O’nundur. O’nun izni olmadan katında kim şefaat edebilir? O, kullarının önlerindekini ve arkalarındakini bilir. Onlar ise O’nun ilminden, dilediği kadarından başka bir şey kavrayamazlar. O’nun kürsüsü gökleri ve yeri kuşatmıştır. Onları koruyup gözetmek O’na ağır gelmez. O, yücedir, büyüktür.",
+                    "arabic": "اللّٰهُ لَا إِلٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ مَنْ ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُ حِفْظُهُمَا ۚ وَهُوَ الْعَلِيُّ الْعَظِيمُ",
+                    "pronunciation": "Allâhü lâ ilâhe illâ hüvel hayyül kayyûm. Lâ te’huzühû sinetün ve lâ nevm. Lehû mâ fis semâvâti ve mâ fil ard… ve hüvel aliyyül azîm."
                 },
                 {
                     "id": 403,
-                    "title": "Amenerrasulü",
-                    "meaning": "Peygamber, Rabbinden kendisine indirilene iman etti.",
-                    "arabic": "اٰمَنَ الرَّسُولُ بِمَٓا اُنْزِلَ اِلَيْهِ...",
-                    "pronunciation": "Âmenerrasûlü bimâ ünzile ileyhi min rabbihî..."
+                    "title": "İhlas Suresi",
+                    "meaning": "De ki: O Allah birdir. Allah sameddir. Doğurmamış ve doğurulmamıştır. Hiçbir şey O’na denk değildir.",
+                    "arabic": "قُلْ هُوَ اللَّهُ أَحَدٌ ۝ اللَّهُ الصَّمَدُ ۝ لَمْ يَلِدْ وَلَمْ يُولَدْ ۝ وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ",
+                    "pronunciation": "Kul hüvallâhü ehad. Allâhüs samed. Lem yelid ve lem yûled. Ve lem yekün lehû küfüven ehad."
+                },
+                {
+                    "id": 404,
+                    "title": "Felak Suresi",
+                    "meaning": "De ki: Yarattıklarının şerrinden, karanlığı çöktüğü zaman gecenin şerrinden, düğümlere üfleyenlerin şerrinden ve haset ettiği zaman hasetçinin şerrinden sabahın Rabbine sığınırım.",
+                    "arabic": "قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ ۝ مِنْ شَرِّ مَا خَلَقَ ۝ وَمِنْ شَرِّ غَاسِقٍ إِذَا وَقَبَ ۝ وَمِنْ شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ ۝ وَمِنْ شَرِّ حَاسِدٍ إِذَا حَسَدَ",
+                    "pronunciation": "Kul e‘ûzü bi rabbil felak. Min şerri mâ halak. Ve min şerri ğâsikın izâ vakab. Ve min şerrin neffâsâti fil ukad. Ve min şerri hâsidin izâ hased."
+                },
+                {
+                    "id": 405,
+                    "title": "Nas Suresi",
+                    "meaning": "De ki: İnsanların Rabbine, insanların Melikine, insanların İlâhına; insanların göğüslerine vesvese veren sinsi şeytanın şerrinden sığınırım.",
+                    "arabic": "قُلْ أَعُوذُ بِرَبِّ النَّاسِ ۝ مَلِكِ النَّاسِ ۝ إِلَٰهِ النَّاسِ ۝ مِنْ شَرِّ الْوَسْوَاسِ الْخَنَّاسِ ۝ الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ ۝ مِنَ الْجِنَّةِ وَالنَّاسِ",
+                    "pronunciation": "Kul e‘ûzü bi rabbin nâs. Melikin nâs. İlâhin nâs. Min şerril vesvâsil hannâs. Ellezî yüvesvisü fî sudûrin nâs. Minel cinneti ven nâs."
+                },
+                {
+                    "id": 406,
+                    "title": "Nazar ve Hasetten Korunma Duası",
+                    "meaning": "Allah’ın kusursuz kelimeleriyle yarattıklarının şerrinden Sana sığınırım.",
+                    "arabic": "أَعُوذُ بِكَلِمَاتِ اللّٰهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ",
+                    "pronunciation": "E‘ûzü bi kelimâtillâhit tâmmâti min şerri mâ halak."
+                },
+                {
+                    "id": 407,
+                    "title": "Korku ve Tehlikeden Korunma Duası",
+                    "meaning": "Allah bana yeter. O ne güzel vekildir.",
+                    "arabic": "حَسْبِيَ اللّٰهُ لَا إِلٰهَ إِلَّا هُوَ عَلَيْهِ تَوَكَّلْتُ",
+                    "pronunciation": "Hasbiyallâhü lâ ilâhe illâ hû. Aleyhi tevekkeltü."
+                },
+                {
+                    "id": 408,
+                    "title": "Şeytandan Korunma Duası",
+                    "meaning": "Kovulmuş şeytandan Allah’a sığınırım.",
+                    "arabic": "أَعُوذُ بِاللّٰهِ مِنَ الشَّيْطَانِ الرَّجِيمِ",
+                    "pronunciation": "E‘ûzü billâhi mineş şeytânirracîm."
+                },
+                {
+                    "id": 409,
+                    "title": "Çocuklar İçin Korunma Duası",
+                    "meaning": "Sizi her şeytandan, her zararlı canlıdan ve her kötü gözden Allah’ın kusursuz kelimeleriyle korurum.",
+                    "arabic": "أُعِيذُكُمَا بِكَلِمَاتِ اللّٰهِ التَّامَّةِ مِنْ كُلِّ شَيْطَانٍ وَهَامَّةٍ وَمِنْ كُلِّ عَيْنٍ لَامَّةٍ",
+                    "pronunciation": "U‘îzukümâ bi kelimâtillâhit tâmmati min kulli şeytânin ve hâmmatin ve min kulli aynin lâmmatin."
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "name": "Tövbe, İstiğfar ve Manevi Arınma Duaları",
+            "icon": "water-percent",
+            "prayers": [
+                {
+                    "id": 501,
+                    "title": "İstiğfar (Kısa)",
+                    "meaning": "Allah’tan bağışlanma dilerim.",
+                    "arabic": "أَسْتَغْفِرُ اللَّهَ",
+                    "pronunciation": "Estağfirullâh."
+                },
+                {
+                    "id": 502,
+                    "title": "İstiğfar (Uzun)",
+                    "meaning": "Büyük ve yüce olan Allah’tan bağışlanma dilerim. O’ndan başka ilah yoktur. O diridir, kayyumdur. O’na tövbe ederim.",
+                    "arabic": "أَسْتَغْفِرُ اللَّهَ الْعَظِيمَ الَّذِي لَا إِلٰهَ إِلَّا هُوَ الْحَيَّ الْقَيُّومَ وَأَتُوبُ إِلَيْهِ",
+                    "pronunciation": "Estağfirullâhel azîmel lezî lâ ilâhe illâ hüvel hayyel kayyûme ve etûbü ileyh."
+                },
+                {
+                    "id": 503,
+                    "title": "Seyyidül İstiğfar",
+                    "meaning": "Allah’ım! Sen benim Rabbimsin. Senden başka ilah yoktur. Beni Sen yarattın, ben Senin kulunum. Gücüm yettiğince Sana verdiğim söz ve ahdim üzereyim. Yaptıklarımın şerrinden Sana sığınırım. Bana verdiğin nimetleri itiraf ederim, günahlarımı da kabul ederim. Beni bağışla. Günahları ancak Sen bağışlarsın.",
+                    "arabic": "اَللّٰهُمَّ أَنْتَ رَبِّي لَا إِلٰهَ إِلَّا أَنْتَ خَلَقْتَنِي وَأَنَا عَبْدُكَ وَأَنَا عَلٰى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ وَأَبُوءُ بِذَنْبِي فَاغْفِرْ لِي فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ",
+                    "pronunciation": "Allâhümme ente rabbî lâ ilâhe illâ ente… feğfir lî fe innehû lâ yağfiruz zünûbe illâ ente."
+                },
+                {
+                    "id": 504,
+                    "title": "Günahların Affı İçin Dua",
+                    "meaning": "Rabbim! Gerçekten ben kendime zulmettim. Eğer beni bağışlamaz ve bana merhamet etmezsen, mutlaka ziyana uğrayanlardan olurum.",
+                    "arabic": "رَبِّ إِنِّي ظَلَمْتُ نَفْسِي فَاغْفِرْ لِي",
+                    "pronunciation": "Rabbi innî zalemtü nefsî fağfir lî."
+                },
+                {
+                    "id": 505,
+                    "title": "Samimi Tövbe Duası",
+                    "meaning": "Allah’ım! Bilerek veya bilmeyerek işlediğim tüm günahlardan Sana tövbe ediyorum. Beni bağışla ve beni Sana yakın olan kullarından eyle.",
+                    "arabic": "اَللّٰهُمَّ إِنِّي أَتُوبُ إِلَيْكَ مِنْ جَمِيعِ الذُّنُوبِ عَمْدِهَا وَخَطَئِهَا",
+                    "pronunciation": "Allâhümme innî etûbü ileyke min cemî‘iz zünûbi amdihâ ve hataihâ."
+                },
+                {
+                    "id": 506,
+                    "title": "Kalp Arınma Duası",
+                    "meaning": "Allah’ım! Kalbimi nifaktan, amelimi riyadan, dilimi yalandan ve gözümü haramdan temizle.",
+                    "arabic": "اَللّٰهُمَّ طَهِّرْ قَلْبِي مِنَ النِّفَاقِ وَعَمَلِي مِنَ الرِّيَاءِ وَلِسَانِي مِنَ الْكَذِبِ",
+                    "pronunciation": "Allâhümme tahhir kalbî minen nifâk ve amelî miner riyâ ve lisânî minel kezib."
+                },
+                {
+                    "id": 507,
+                    "title": "Nefse Karşı Dua",
+                    "meaning": "Allah’ım! Nefsimin şerrinden Sana sığınırım.",
+                    "arabic": "اَللّٰهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ شَرِّ نَفْسِي",
+                    "pronunciation": "Allâhümme innî e‘ûzü bike min şerri nefsî."
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "name": "Rızık, Bereket ve İş–Başarı Duaları",
+            "icon": "briefcase-check",
+            "prayers": [
+                {
+                    "id": 601,
+                    "title": "Helal Rızık Duası",
+                    "meaning": "Allah’ım! Bana helal, temiz ve bereketli rızık nasip et.",
+                    "arabic": "اَللّٰهُمَّ ارْزُقْنِي رِزْقًا حَلَالًا طَيِّبًا وَاسِعًا",
+                    "pronunciation": "Allâhümme’rzuknî rizkan halâlen tayyiben vâsi‘â."
+                },
+                {
+                    "id": 602,
+                    "title": "Rızık Kapılarının Açılması Duası",
+                    "meaning": "Allah’ım! Bana rahmetinden kapılar aç ve beni ummadığım yerlerden rızıklandır.",
+                    "arabic": "اَللّٰهُمَّ افْتَحْ لِي أَبْوَابَ رِزْقِكَ مِنْ حَيْثُ لَا أَحْتَسِبُ",
+                    "pronunciation": "Allâhümme’ftah lî ebvâbe rizkike min haysü lâ ahtesib."
+                },
+                {
+                    "id": 603,
+                    "title": "Bereket Duası",
+                    "meaning": "Allah’ım! Bana verdiklerini benim için bereketli kıl.",
+                    "arabic": "اَللّٰهُمَّ بَارِكْ لِي فِيمَا رَزَقْتَنِي",
+                    "pronunciation": "Allâhümme bârik lî fîmâ razaktenî."
+                },
+                {
+                    "id": 604,
+                    "title": "İş ve Çalışma Duası",
+                    "meaning": "Rabbim! İşimi bana kolaylaştır, sonucunu hayırlı eyle.",
+                    "arabic": "رَبِّ اشْرَحْ لِي صَدْرِي وَيَسِّرْ لِي أَمْرِي",
+                    "pronunciation": "Rabbi’şrah lî sadrî ve yessir lî emrî."
+                },
+                {
+                    "id": 605,
+                    "title": "Borçtan Kurtulma Duası",
+                    "meaning": "Allah’ım! Beni helalinle haramdan müstağni kıl, fazlınla başkasına muhtaç etme.",
+                    "arabic": "اَللّٰهُمَّ اكْفِنِي بِحَلَالِكَ عَنْ حَرَامِكَ وَأَغْنِنِي بِفَضْلِكَ عَمَّنْ سِوَاكَ",
+                    "pronunciation": "Allâhümme’kfinî bi halâlike an harâmik ve ağninî bi fadlike ammen sivâk."
+                },
+                {
+                    "id": 606,
+                    "title": "Hayır ve Kolaylık Duası",
+                    "meaning": "Allah’ım! Bana hayırlı olanı nasip et ve onu benim için kolaylaştır.",
+                    "arabic": "اَللّٰهُمَّ اخْتَرْ لِي وَيَسِّرْ لِي الْخَيْرَ",
+                    "pronunciation": "Allâhümme’htar lî ve yessir lîl hayr."
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "name": "Aile, Evlilik ve Çocuklar İçin Dualar",
+            "icon": "home-heart",
+            "prayers": [
+                {
+                    "id": 701,
+                    "title": "Aile İçin Dua",
+                    "meaning": "Rabbimiz! Eşlerimizi ve çocuklarımızı göz aydınlığı kıl ve bizi takva sahiplerine önder eyle.",
+                    "arabic": "رَبَّنَا هَبْ لَنَا مِنْ أَزْوَاجِنَا وَذُرِّيَّاتِنَا قُرَّةَ أَعْيُنٍ وَاجْعَلْنَا لِلْمُتَّقِينَ إِمَامًا",
+                    "pronunciation": "Rabbenâ heb lenâ min ezvâcinâ ve zürriyyâtinâ kurrate a‘yunin vec‘alnâ lil muttekîne imâmâ."
+                },
+                {
+                    "id": 702,
+                    "title": "Eşler Arası Sevgi ve Huzur Duası",
+                    "meaning": "Allah’ım! Eşlerimizin kalpleri arasına sevgi, merhamet ve huzur yerleştir.",
+                    "arabic": "اَللّٰهُمَّ أَلِّفْ بَيْنَ قُلُوبِنَا وَاجْعَلْ بَيْنَنَا مَوَدَّةً وَرَحْمَةً",
+                    "pronunciation": "Allâhümme ellif beyne kulûbinâ vec‘al beynenâ meveddeten ve rahmeh."
+                },
+                {
+                    "id": 703,
+                    "title": "Hayırlı Evlilik Duası",
+                    "meaning": "Allah’ım! Benim için hayırlı olan eşi nasip et ve bu evliliği benim için hayırlı kıl.",
+                    "arabic": "اَللّٰهُمَّ ارْزُقْنِي زَوْجًا صَالِحًا وَاجْعَلْهُ خَيْرًا لِي",
+                    "pronunciation": "Allâhümme’rzuknî zevcen sâlihan vec‘alhû hayran lî."
+                },
+                {
+                    "id": 704,
+                    "title": "Çocuklar İçin Korunma ve Hayır Duası",
+                    "meaning": "Rabbim! Çocuklarımı bana bağışla, onları salihlerden eyle.",
+                    "arabic": "رَبِّ هَبْ لِي مِنَ الصَّالِحِينَ",
+                    "pronunciation": "Rabbi heb lî mines sâlihîn."
+                },
+                {
+                    "id": 705,
+                    "title": "Anne Baba İçin Dua",
+                    "meaning": "Rabbim! Anne ve babama merhamet et, beni küçükken yetiştirdikleri gibi.",
+                    "arabic": "رَبِّ ارْحَمْهُمَا كَمَا رَبَّيَانِي صَغِيرًا",
+                    "pronunciation": "Rabbi’rhamhümâ kemâ rabbeyânî sağîrâ."
+                },
+                {
+                    "id": 706,
+                    "title": "Evlatların İman ve Ahlakı İçin Dua",
+                    "meaning": "Allah’ım! Evlatlarımı imanla yaşat, imanla öldür ve onları salih kullarından eyle.",
+                    "arabic": "اَللّٰهُمَّ اجْعَلْ أَوْلَادِي مِنَ الصَّالِحِينَ وَاحْفَظْهُمْ بِحِفْظِكَ",
+                    "pronunciation": "Allâhümme’c‘al evlâdî mines sâlihîn vahfazhum bi hıfzık."
+                },
+                {
+                    "id": 707,
+                    "title": "Aileyi Kötülüklerden Koruma Duası",
+                    "meaning": "Allah’ım! Ailemi her türlü kötülükten, fitneden ve musibetten koru.",
+                    "arabic": "اَللّٰهُمَّ احْفَظْ أَهْلِي مِنْ كُلِّ سُوءٍ وَبَلَاءٍ",
+                    "pronunciation": "Allâhümme’hfaz ehlî min kulli sûin ve belâ."
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "name": "Ahiret, Ölüm ve Kabir Duaları",
+            "icon": "flower-tulip",
+            "prayers": [
+                {
+                    "id": 801,
+                    "title": "Hayırlı Son (Hüsn-ü Hâtime) Duası",
+                    "meaning": "Allah’ım! Hayatımın sonunu hayırlı eyle.",
+                    "arabic": "اَللّٰهُمَّ اجْعَلْ خَيْرَ عُمُرِي آخِرَهُ وَخَيْرَ عَمَلِي خَوَاتِيمَهُ",
+                    "pronunciation": "Allâhümme’c‘al hayra umurî âhirahû ve hayra amelî havâtîmeh."
+                },
+                {
+                    "id": 802,
+                    "title": "İmanla Ölme Duası",
+                    "meaning": "Allah’ım! Bizi Müslüman olarak yaşat ve Müslüman olarak vefat ettir.",
+                    "arabic": "اَللّٰهُمَّ أَحْيِنَا مُسْلِمِينَ وَأَمِتْنَا مُسْلِمِينَ",
+                    "pronunciation": "Allâhümme ahyinâ müslimîn ve emitnâ müslimîn."
+                },
+                {
+                    "id": 803,
+                    "title": "Kabir Azabından Korunma Duası",
+                    "meaning": "Allah’ım! Kabir azabından Sana sığınırım.",
+                    "arabic": "اَللّٰهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ عَذَابِ الْقَبْرِ",
+                    "pronunciation": "Allâhümme innî e‘ûzü bike min azâbil kabr."
+                },
+                {
+                    "id": 804,
+                    "title": "Cehennem Azabından Korunma Duası",
+                    "meaning": "Rabbimiz! Bizi cehennem azabından koru.",
+                    "arabic": "رَبَّنَا قِنَا عَذَابَ النَّارِ",
+                    "pronunciation": "Rabbenâ kınâ azâben nâr."
+                },
+                {
+                    "id": 805,
+                    "title": "Hesap Günü Kolaylık Duası",
+                    "meaning": "Allah’ım! Hesap gününü bize kolay kıl.",
+                    "arabic": "اَللّٰهُمَّ حَاسِبْنَا حِسَابًا يَسِيرًا",
+                    "pronunciation": "Allâhümme hâsibnâ hisâben yesîrâ."
+                },
+                {
+                    "id": 806,
+                    "title": "Cennet Talebi Duası",
+                    "meaning": "Allah’ım! Senden cenneti isterim ve beni ona yaklaştıracak söz ve amelleri nasip et.",
+                    "arabic": "اَللّٰهُمَّ إِنِّي أَسْأَلُكَ الْجَنَّةَ وَمَا قَرَّبَ إِلَيْهَا مِنْ قَوْلٍ وَعَمَلٍ",
+                    "pronunciation": "Allâhümme innî es’elüke’l cennete ve mâ karrabe ileyhâ min kavlin ve amel."
+                },
+                {
+                    "id": 807,
+                    "title": "Ahirette Yüz Akı Duası",
+                    "meaning": "Allah’ım! Bizi o gün yüzleri ak, kalpleri temiz olanlardan eyle.",
+                    "arabic": "اَللّٰهُمَّ اجْعَلْنَا يَوْمَ الْقِيَامَةِ مِنَ الْمُفْلِحِينَ",
+                    "pronunciation": "Allâhümme’c‘alnâ yevmel kıyâmeti minel muflihîn."
+                },
+                {
+                    "id": 808,
+                    "title": "Peygamberimize Komşuluk Duası",
+                    "meaning": "Allah’ım! Bizi Peygamberimizin sancağı altında topla.",
+                    "arabic": "اَللّٰهُمَّ احْشُرْنَا تَحْتَ لِوَاءِ نَبِيِّكَ",
+                    "pronunciation": "Allâhümme’hşurnâ tahte livâi nebiyyik."
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "name": "Aile, Evlilik ve Nesil Duaları",
+            "icon": "account-group",
+            "prayers": [
+                {
+                    "id": 901,
+                    "title": "Hayırlı Eş Duası",
+                    "meaning": "Rabbimiz! Bize göz aydınlığı olacak eşler ve nesiller ihsan et.",
+                    "arabic": "رَبَّنَا هَبْ لَنَا مِنْ أَزْوَاجِنَا وَذُرِّيَّاتِنَا قُرَّةَ أَعْيُنٍ",
+                    "pronunciation": "Rabbenâ heb lenâ min ezvâcinâ ve zürriyyâtinâ kurrete a‘yün."
+                },
+                {
+                    "id": 902,
+                    "title": "Aile Huzuru Duası",
+                    "meaning": "Allah’ım! Evlerimize huzur, kalplerimize sevgi ver.",
+                    "arabic": "اَللّٰهُمَّ أَلِّفْ بَيْنَ قُلُوبِنَا وَاجْعَلْ بُيُوتَنَا سَكِينَةً",
+                    "pronunciation": "Allâhümme ellif beyne kulûbinâ vec‘al buyûtenâ sekîneh."
+                },
+                {
+                    "id": 903,
+                    "title": "Eşler Arası Muhabbet Duası",
+                    "meaning": "Allah’ım! Aramıza sevgi ve merhamet koy.",
+                    "arabic": "وَاجْعَلْ بَيْنَنَا مَوَدَّةً وَرَحْمَةً",
+                    "pronunciation": "Vec‘al beynenâ meveddeten ve rahmeh."
+                },
+                {
+                    "id": 904,
+                    "title": "Hayırlı Evlat Duası",
+                    "meaning": "Rabbim! Bana salih evlatlar ihsan eyle.",
+                    "arabic": "رَبِّ هَبْ لِي مِنَ الصَّالِحِينَ",
+                    "pronunciation": "Rabbi heb lî mines sâlihîn."
+                },
+                {
+                    "id": 905,
+                    "title": "Evlatların Doğru Yolda Olması Duası",
+                    "meaning": "Allah’ım! Evlatlarımızı dosdoğru yoluna ilet.",
+                    "arabic": "اَللّٰهُمَّ اهْدِ أَوْلَادَنَا إِلَى صِرَاطِكَ الْمُسْتَقِيمِ",
+                    "pronunciation": "Allâhümme’hdi evlâdenâ ilâ sırâtikel müstekîm."
+                },
+                {
+                    "id": 906,
+                    "title": "Anne Baba İçin Dua",
+                    "meaning": "Rabbim! Anne ve babama merhamet et.",
+                    "arabic": "رَبِّ ارْحَمْهُمَا  كَمَا رَبَّيَانِي صَغِيرًا",
+                    "pronunciation": "Rabbi’rhamhumâ kemâ rabbeyânî sagîrâ."
+                },
+                {
+                    "id": 907,
+                    "title": "Aileyi Fitneden Koruma Duası",
+                    "meaning": "Allah’ım! Ailemizi her türlü fitneden muhafaza eyle.",
+                    "arabic": "اَللّٰهُمَّ احْفَظْ أَهْلَنَا مِنْ كُلِّ فِتْنَةٍ",
+                    "pronunciation": "Allâhümme’hfaz ehlenâ min kulli fitneh."
+                },
+                {
+                    "id": 908,
+                    "title": "Soyun Devamı ve Bereket Duası",
+                    "meaning": "Allah’ım! Neslimizi hayırlı ve bereketli kıl.",
+                    "arabic": "اَللّٰهُمَّ بَارِكْ لَنَا فِي ذُرِّيَّتِنَا",
+                    "pronunciation": "Allâhümme bârik lenâ fî zürriyyetinâ."
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "name": "Zamanlara Özel Dualar",
+            "icon": "clock-outline",
+            "prayers": [
+                {
+                    "id": 1001,
+                    "title": "Gece Duası",
+                    "meaning": "Allah’ım! Gecemi hayırlı kıl, kalbimi huzurla doldur.",
+                    "arabic": "اَللّٰهُمَّ اجْعَلْ لَيْلِي خَيْرًا وَاطْمَأْنَانًا لِقَلْبِي",
+                    "pronunciation": "Allâhümme’c‘al leylî hayran vâtmî’nânen li kalbî."
+                },
+                {
+                    "id": 1002,
+                    "title": "Seher Vakti Duası",
+                    "meaning": "Allah’ım! Seher vakti yaptığım duaları kabul eyle.",
+                    "arabic": "اَللّٰهُمَّ تَقَبَّلْ دُعَائِي فِي وَقْتِ السَّحَرِ",
+                    "pronunciation": "Allâhümme tekabbel du‘âî fî vakti’s-seher."
+                },
+                {
+                    "id": 1003,
+                    "title": "Cuma Günü Duası",
+                    "meaning": "Allah’ım! Cuma gününü bizim için bereketli ve hayırlı kıl.",
+                    "arabic": "اَللّٰهُمَّ اجْعَلْ يَوْمَ الْجُمُعَةِ يَوْمًا مُبَارَكًا لَنَا",
+                    "pronunciation": "Allâhümme’c‘al yevmel cumu‘ati yevmen mübâreken lenâ."
+                },
+                {
+                    "id": 1004,
+                    "title": "Cuma Saati İcabet Duası",
+                    "meaning": "Allah’ım! Bu mübarek saatte yaptığım duaları kabul eyle.",
+                    "arabic": "اَللّٰهُمَّ اسْتَجِبْ دُعَائِي فِي سَاعَةِ الْإِجَابَةِ",
+                    "pronunciation": "Allâhümme’stecib du‘âî fî sâ‘atil icâbeh."
+                },
+                {
+                    "id": 1005,
+                    "title": "Kandil Gecesi Duası",
+                    "meaning": "Allah’ım! Bu mübarek gecede günahlarımızı bağışla.",
+                    "arabic": "اَللّٰهُمَّ اغْفِرْ لَنَا فِي هٰذِهِ اللَّيْلَةِ الْمُبَارَكَةِ",
+                    "pronunciation": "Allâhümme’ğfir lenâ fî hâzihil leyletil mübârekeh."
+                },
+                {
+                    "id": 1006,
+                    "title": "Ramazan Ayı Duası",
+                    "meaning": "Allah’ım! Ramazan ayını bizim için rahmet ve mağfiret ayı kıl.",
+                    "arabic": "اَللّٰهُمَّ اجْعَلْ شَهْرَ رَمَضَانَ شَهْرَ رَحْمَةٍ وَمَغْفِرَةٍ",
+                    "pronunciation": "Allâhümme’c‘al şehre Ramadâne şehra rahmetin ve mağfireh."
+                },
+                {
+                    "id": 1007,
+                    "title": "İftar Vakti Duası",
+                    "meaning": "Allah’ım! Senin rızan için oruç tuttum, verdiğin rızıkla iftar ettim.",
+                    "arabic": "اَللّٰهُمَّ لَكَ صُمْتُ وَعَلَى رِزْقِكَ أَفْطَرْتُ",
+                    "pronunciation": "Allâhümme leke sumtü ve alâ rızkıke eftartü."
+                },
+                {
+                    "id": 1008,
+                    "title": "Kadir Gecesi Duası",
+                    "meaning": "Allah’ım! Sen affedicisin, affetmeyi seversin, beni affet.",
+                    "arabic": "اَللّٰهُمَّ إِنَّكَ عَفُوٌّ تُحِبُّ الْعَفْوَ فَاعْفُ عَنِّي",
+                    "pronunciation": "Allâhümme inneke afüvvün tuhibbü’l-afve fa‘fu annî."
+                },
+                {
+                    "id": 1009,
+                    "title": "Bayram Günü Duası",
+                    "meaning": "Allah’ım! Bayramımızı sevinç, birlik ve bereketle doldur.",
+                    "arabic": "اَللّٰهُمَّ اجْعَلْ عِيدَنَا عِيدَ فَرَحٍ وَبَرَكَةٍ",
+                    "pronunciation": "Allâhümme’c‘al îdenâ îde ferahin ve berekeh."
+                },
+                {
+                    "id": 1010,
+                    "title": "Yeni Gün Başlangıcı Duası",
+                    "meaning": "Allah’ım! Bu günü benim için hayırla başlat ve hayırla tamamlat.",
+                    "arabic": "اَللّٰهُمَّ اجْعَلْ هٰذَا الْيَوْمَ خَيْرًا أَوَّلَهُ وَآخِرَهُ",
+                    "pronunciation": "Allâhümme’c‘al hâzâ’l-yevme hayran evvelehû ve âhirehû."
                 }
             ]
         }

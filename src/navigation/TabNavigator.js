@@ -25,17 +25,15 @@ export default function TabNavigator() {
                 tabBarInactiveTintColor: theme.subText,
 
                 tabBarStyle: {
-                    backgroundColor: theme.card,
-                    borderTopColor: theme.border,
-                    borderTopWidth: 1,
-                    elevation: 20,
-                    // Alt boşluğu telefonun kendi sistem boşluğuna göre ayarlar
-                    // Eğer sistem boşluğu yoksa (eski tel), manuel 20px verir
-                    height: Platform.OS === 'ios' ? 85 : 65 + (insets.bottom > 0 ? insets.bottom : 15),
-                    paddingBottom: Platform.OS === 'ios' ? insets.bottom : (insets.bottom > 0 ? insets.bottom : 15),
-                    paddingTop: 10,
-                },
-
+    backgroundColor: theme.card,
+    borderTopColor: theme.border,
+    borderTopWidth: 1,
+    elevation: 20,
+    // Garantili yükseklik hesabı:
+    height: Platform.OS === 'ios' ? 88 : (65 + (insets.bottom || 0)),
+    paddingBottom: Platform.OS === 'ios' ? insets.bottom : (insets.bottom > 0 ? insets.bottom : 10),
+    paddingTop: 10,
+},
                 tabBarLabelStyle: {
                     fontSize: 11,
                     fontWeight: '800',
