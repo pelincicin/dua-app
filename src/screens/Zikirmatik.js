@@ -9,12 +9,12 @@ import {
     Modal,
     Platform,
     ScrollView,
+    StatusBar,
     StyleSheet,
     Text,
     TouchableOpacity,
     Vibration,
-    View,
-    StatusBar
+    View
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTheme } from '../context/ThemeContext';
@@ -24,7 +24,6 @@ const { width, height } = Dimensions.get('window');
 const isSmallDevice = height < 700;
 const isIPad = width > 600;
 
-// Ekran boyutuna göre dinamik buton ve yazı boyutları
 const responsiveBtnSize = isIPad ? height * 0.22 : (isSmallDevice ? height * 0.17 : height * 0.20);
 const responsiveCountSize = isIPad ? height * 0.12 : (isSmallDevice ? height * 0.08 : height * 0.10);
 
@@ -65,22 +64,29 @@ export default function Zikirmatik() {
             const today = new Date().toLocaleDateString('tr-TR');
             const values = await AsyncStorage.multiGet(['@count', '@target', '@reports', '@lastDate']);
 
-            if (values[1][1]) setTarget(parseInt(values[1][1]));
-            if (values[2][1]) {
-                const parsed = JSON.parse(values[2][1]);
+            const savedCount = values[0][1];
+            const savedTarget = values[1][1];
+            const savedReports = values[2][1];
+            const lastDate = values[3][1];
+
+            if (savedTarget) setTarget(parseInt(savedTarget));
+            if (savedReports) {
+                const parsed = JSON.parse(savedReports);
                 setHistory(Object.entries(parsed).reverse());
             }
 
-            const lastDate = values[3][1];
             if (lastDate && lastDate !== today) {
                 setCount(0);
                 contextSifirla();
-                await AsyncStorage.multiSet([['@lastDate', today], ['@count', "0"]]);
+                await AsyncStorage.multiSet([
+                    ['@lastDate', today],
+                    ['@count', "0"]
+                ]);
             } else {
-                if (values[0][1]) setCount(parseInt(values[0][1]));
+                if (savedCount) setCount(parseInt(savedCount));
                 if (!lastDate) await AsyncStorage.setItem('@lastDate', today);
             }
-        } catch (e) { console.log(e); }
+        } catch (e) { console.log("Veri yükleme hatası:", e); }
     }, [contextSifirla]);
 
     useEffect(() => { if (isFocused) loadData(); }, [isFocused, loadData]);
@@ -92,7 +98,7 @@ export default function Zikirmatik() {
             duration: 200,
             useNativeDriver: false
         }).start();
-    }, [count, target]);
+    }, [count, target, progressWidth]); // progressWidth bağımlılıklara eklendi
 
     const saveData = useCallback(async (currentCount, currentTotal) => {
         try {
@@ -102,6 +108,7 @@ export default function Zikirmatik() {
                 ['@target', target.toString()],
                 ['@lastDate', today]
             ]);
+
             let reports = await AsyncStorage.getItem('@reports');
             let reportsObj = reports ? JSON.parse(reports) : {};
             reportsObj[today] = currentTotal;
@@ -133,7 +140,12 @@ export default function Zikirmatik() {
         playZikirSound();
 
         if (isVibrate) {
-            newCount % target === 0 ? Vibration.vibrate([0, 150, 100, 150]) : Vibration.vibrate(40);
+            // Hatalı görülen ternary yapısı düzeltildi
+            if (newCount % target === 0) {
+                Vibration.vibrate([0, 150, 100, 150]);
+            } else {
+                Vibration.vibrate(40);
+            }
         }
         saveData(newCount, newTotal);
     };
@@ -149,8 +161,7 @@ export default function Zikirmatik() {
         <SafeAreaView style={[styles.safe, { backgroundColor: theme.bg }]} edges={['top', 'left', 'right', 'bottom']}>
             <StatusBar barStyle={isDarkMode ? "light-content" : "dark-content"} />
             <ScrollView contentContainerStyle={styles.scrollContent} bounces={false} showsVerticalScrollIndicator={false}>
-                
-                {/* ÜST GRUP */}
+
                 <View style={styles.topGroup}>
                     <View style={styles.header}>
                         <View>
@@ -166,9 +177,9 @@ export default function Zikirmatik() {
                     <View style={styles.selectorWrapper}>
                         <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.selectorScroll}>
                             {ZIKIR_DATA.map((z) => (
-                                <TouchableOpacity 
-                                    key={z.id} 
-                                    onPress={() => { setSelectedZikir(z); setCount(0); }} 
+                                <TouchableOpacity
+                                    key={z.id}
+                                    onPress={() => { setSelectedZikir(z); setCount(0); }}
                                     style={[styles.tab, { backgroundColor: theme.card, borderColor: theme.border }, selectedZikir.id === z.id && { backgroundColor: theme.active, borderColor: theme.active }]}
                                 >
                                     <Text style={[styles.tabText, { color: theme.subText }, selectedZikir.id === z.id && { color: '#FFF' }]}>{z.name}</Text>
@@ -178,7 +189,6 @@ export default function Zikirmatik() {
                     </View>
                 </View>
 
-                {/* ORTA GRUP (ESNEK ALAN) */}
                 <View style={styles.centerGroup}>
                     <View style={styles.statsRow}>
                         <View style={[styles.statCard, { backgroundColor: theme.card }]}>
@@ -210,7 +220,6 @@ export default function Zikirmatik() {
                     </View>
                 </View>
 
-                {/* ALT GRUP */}
                 <View style={styles.bottomGroup}>
                     <View style={[styles.adContainer, { backgroundColor: theme.card, borderColor: theme.border }]}>
                         <Text style={{ color: theme.subText, fontSize: 10, fontWeight: '600' }}>Reklam Alanı</Text>
@@ -236,7 +245,6 @@ export default function Zikirmatik() {
                 </View>
             </ScrollView>
 
-            {/* MODAL GÜNLÜK */}
             <Modal visible={showReports} onRequestClose={() => setShowReports(false)} animationType="slide" transparent={true}>
                 <View style={styles.modalOverlay}>
                     <View style={[styles.modalContent, { backgroundColor: theme.card }]}>

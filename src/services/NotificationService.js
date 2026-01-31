@@ -1,19 +1,17 @@
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as Notifications from 'expo-notifications';
 import { Platform } from 'react-native';
 
-// 1. Bildirim Yönetimi (Ses ve Görünüm)
+// 1. Bildirim Davranışı Ayarı
 Notifications.setNotificationHandler({
     handleNotification: async () => ({
         shouldShowAlert: true,
-        shouldPlaySound: true, // SES AÇIK
+        shouldPlaySound: true,
         shouldSetBadge: true,
         priority: Notifications.AndroidNotificationPriority.MAX,
-        vibrationPattern: [0, 250, 250, 250],
     }),
 });
 
-// 2. Kurulum ve İzinler
+// 2. İzinler ve Android Kanal Kurulumu
 export const setupNotifications = async () => {
     const { status: existingStatus } = await Notifications.getPermissionsAsync();
     let finalStatus = existingStatus;
@@ -26,97 +24,98 @@ export const setupNotifications = async () => {
     if (finalStatus !== 'granted') return false;
 
     if (Platform.OS === 'android') {
-        await Notifications.setNotificationChannelAsync('default', {
-            name: 'Genel Hatırlatıcılar',
-            importance: Notifications.AndroidImportance.MAX, // Ses çıkması için MAX olmalı
+        // Kanal ismini değiştirerek Android sistemini ayarları güncellemeye zorluyoruz
+        await Notifications.setNotificationChannelAsync('zikir-v2', {
+            name: 'Huzur Hatırlatıcıları',
+            importance: Notifications.AndroidImportance.MAX,
             sound: true,
             vibrationPattern: [0, 250, 250, 250],
-            lightColor: '#1B4332',
+            enableVibrate: true,
+            lockscreenVisibility: Notifications.AndroidNotificationVisibility.PUBLIC,
         });
     }
     return true;
 };
 
-// 3. Günün Duası (Sabah 10:30 - Güne başlarken)
-export const scheduleDuaReminder = async () => {
-    await Notifications.scheduleNotificationAsync({
-        content: {
-            title: "Hayırlı Sabahlar 🤲",
-            body: "Günün özel duasını okuyarak huzura kavuşmak ister misin?",
-            data: { screen: 'DuaDetay' },
-        },
-        trigger: {
-            type: Notifications.SchedulableTriggerInputTypes.DAILY,
-            hour: 10,
-            minute: 0,
-            channelId: 'default',
-        },
-    });
-};
-
-// 4. Öğle Salavat Hatırlatıcısı (Öğle 14:00)
-export const scheduleSalavatReminder = async () => {
-    await Notifications.scheduleNotificationAsync({
-        content: {
-            title: "Salavat Getirmeyi Unutma ✨",
-            body: "Allahümme salli alâ seyyidinâ Muhammedin ve alâ âli seyyidinâ Muhammed.",
-        },
-        trigger: {
-            type: Notifications.SchedulableTriggerInputTypes.DAILY,
-            hour: 14,
-            minute: 5,
-            channelId: 'default',
-        },
-    });
-};
-
-// 5. Cuma Tebriği (Her Cuma 11:00)
-export const scheduleFridayReminder = async () => {
-    await Notifications.scheduleNotificationAsync({
-        content: {
-            title: "Hayırlı Cumalar 🌹",
-            body: "Bugün Cuma, Cuma duasını okumayı unutmayın.",
-        },
-        trigger: {
-            type: Notifications.SchedulableTriggerInputTypes.WEEKLY,
-            weekday: 6, // 6 = Cuma (Expo takvimine göre)
-            hour: 11,
-            minute: 0,
-            channelId: 'default',
-        },
-    });
-};
-
-// 6. Gün Sonu Zikir Özeti (Akşam 18:30 - Geceye kalmadan)
-export const scheduleZikirSummary = async () => {
+// 3. Merkezi Bildirim Planlayıcı (Hataları Önleyen Fonksiyon)
+const schedule = async (id, title, body, trigger) => {
     try {
-        const kaydedilmisDun = await AsyncStorage.getItem('@dun_zikir');
-        const count = kaydedilmisDun ? parseInt(kaydedilmisDun) : 0;
-
         await Notifications.scheduleNotificationAsync({
+            identifier: id, // Aynı ID ile gelen yeni bildirim eskisini ezer, kalabalığı önler.
             content: {
-                title: "Günün Zikir Notu ✨",
-                body: count > 0
-                    ? `Bugün ${count} zikir çektin. Rabbim kabul etsin!`
-                    : "Bugünü biraz durgun geçirdik, akşam zikrini çekmek ister misin?",
+                title,
+                body,
+                sound: true,
+                priority: Notifications.AndroidNotificationPriority.MAX,
+                android: {
+                    channelId: 'zikir-v2',
+                    pressAction: { id: 'default' }
+                }
             },
             trigger: {
-                type: Notifications.SchedulableTriggerInputTypes.DAILY,
-                hour: 19,
-                minute: 0,
-                channelId: 'default',
+                ...trigger,
+                channelId: 'zikir-v2'
             },
         });
-    } catch (error) {
-        console.log("Bildirim planlama hatası:", error);
+    } catch (e) {
+        console.log(`${id} planlanırken hata oluştu:`, e);
     }
 };
 
-// Toplu Planlayıcı (Uygulama açılışında çağrılır)
+// 4. Hatırlatıcı Tanımlamaları
+export const scheduleDuaReminder = async () => {
+    await schedule(
+        'dua_daily',
+        "Hayırlı Sabahlar 🤲",
+        "Günün özel duasını okuyarak huzura kavuşmak ister misin?",
+        { hour: 10, minute: 0, repeats: true }
+    );
+};
+
+export const scheduleSalavatReminder = async () => {
+    await schedule(
+        'salavat_daily',
+        "Salavat Getirmeyi Unutma ✨",
+        "Peygamber Efendimize (sav) bir salavat göndererek güne bereket katabilirsin.",
+        { hour: 14, minute: 5, repeats: true }
+    );
+};
+
+export const scheduleFridayReminder = async () => {
+    await schedule(
+        'friday_weekly',
+        "Hayırlı Cumalar 🌹",
+        "Bugün Cuma; Kehf suresini okumayı ve dua etmeyi unutmayın.",
+        { weekday: 6, hour: 11, minute: 0, repeats: true } // 6 = Cuma (Bazı sistemlerde 5 olabilir, test ediniz)
+    );
+};
+
+export const scheduleZikirSummary = async () => {
+    // Sayı hatasını önlemek için metni kullanıcıyı uygulamaya davet edecek şekilde güncelledik.
+    await schedule(
+        'zikir_summary',
+        "Günün Zikir Notu ✨",
+        "Bugünkü zikir hedefine ulaştın mı? Kontrol etmek ve huzura kavuşmak için tıkla. 🤲",
+        { hour: 19, minute: 0, repeats: true }
+    );
+};
+
+// 5. Ana Başlatıcı
 export const scheduleAllNotifications = async () => {
-    await Notifications.cancelAllScheduledNotificationsAsync(); // Üst üste binmesin
-    await scheduleDuaReminder();
-    await scheduleSalavatReminder();
-    await scheduleFridayReminder();
-    await scheduleZikirSummary();
+    const hasPermission = await setupNotifications();
+    if (!hasPermission) {
+        console.log("Bildirim izni alınamadı.");
+        return;
+    }
+
+    // Önceki tüm hatalı/çakışan planları temizliyoruz.
+    await Notifications.cancelAllScheduledNotificationsAsync();
+
+    // Yeni tertemiz planları kuruyoruz.
+    await Promise.all([
+        scheduleDuaReminder(),
+        scheduleSalavatReminder(),
+        scheduleFridayReminder(),
+        scheduleZikirSummary()
+    ]);
 };
