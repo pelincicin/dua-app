@@ -1,19 +1,23 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
-import { useEffect } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react'; // useRef eklendi
+import { Animated, Text, View } from 'react-native';
 
 // Context'ler
 import { ThemeProvider, useTheme } from './src/context/ThemeContext';
 import { ZikirProvider } from './src/context/ZikirContext';
 
 // Bildirim Servisi
-import { scheduleDuaReminder, scheduleZikirSummary, setupNotifications } from './src/services/NotificationService';
+import { scheduleAllNotifications } from './src/utils/notificationHelper';
 
 // Ekranlar ve Navigasyon
 import TabNavigator from './src/navigation/TabNavigator';
 import DuaDetay from './src/screens/DuaDetay';
 import Kible from './src/screens/Kible';
+
+SplashScreen.preventAutoHideAsync();
 
 const Stack = createNativeStackNavigator();
 
@@ -32,14 +36,11 @@ function RootStack() {
                 contentStyle: { backgroundColor: theme.bg }
             }}
         >
-            {/* Alt Menü (AnaSayfa ve Zikirmatik) */}
             <Stack.Screen
                 name="MainTabs"
                 component={TabNavigator}
                 options={{ headerShown: false }}
             />
-
-            {/* Dua Detay */}
             <Stack.Screen
                 name="DuaDetay"
                 component={DuaDetay}
@@ -49,8 +50,6 @@ function RootStack() {
                     headerShadowVisible: false,
                 })}
             />
-
-            {/* Kıble Ekranı */}
             <Stack.Screen
                 name="Kible"
                 component={Kible}
@@ -65,28 +64,67 @@ function RootStack() {
 }
 
 function AppContent() {
-    const { isDarkMode } = useTheme();
+    const { isDarkMode, theme } = useTheme(); // theme buraya eklendi
+    const [appIsReady, setAppIsReady] = useState(false);
+
+    // ESLint uyarısını çözmek için fadeAnim'i useRef veya useState ile tutabiliriz.
+    // Animasyon değerleri için useRef en stabil yöntemdir.
+    const fadeAnim = useRef(new Animated.Value(0)).current;
 
     useEffect(() => {
-        // Bildirimleri Başlat
-        async function initializeNotifications() {
-            const hasPermission = await setupNotifications();
-            if (hasPermission) {
-                // Her gün 09:00'da Dua Hatırlatıcısı
-                await scheduleDuaReminder();
-                // Her akşam 21:00'da dün ne yapıldığına dair Zikir Özeti
-                // (Not: Gerçek veri için bu kısım zikirmatik içinden de tetiklenebilir)
-                await scheduleZikirSummary(0);
+        async function prepare() {
+            try {
+                await scheduleAllNotifications();
+                await new Promise(resolve => setTimeout(resolve, 2000));
+            } catch (e) {
+                console.warn(e);
+            } finally {
+                setAppIsReady(true);
             }
         }
-        initializeNotifications();
+        prepare();
     }, []);
 
+    const onLayoutRootView = useCallback(async () => {
+        if (appIsReady) {
+            await SplashScreen.hideAsync();
+            Animated.timing(fadeAnim, {
+                toValue: 1,
+                duration: 800,
+                useNativeDriver: true,
+            }).start();
+        }
+    }, [appIsReady, fadeAnim]); // fadeAnim bağımlılığa eklendi, hata çözüldü.
+
+    if (!appIsReady) {
+        return null;
+    }
+
     return (
-        <>
-            <StatusBar style={isDarkMode ? 'light' : 'dark'} translucent={true} />
-            <RootStack />
-        </>
+        <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
+            <Animated.View style={{ flex: 1, opacity: fadeAnim }}>
+                <StatusBar style={isDarkMode ? 'light' : 'dark'} translucent={true} />
+                <RootStack />
+
+                {/* Geliştirici İsmi (En Alt Kısım) */}
+                <View style={{
+                    position: 'absolute',
+                    bottom: 10,
+                    width: '100%',
+                    alignItems: 'center',
+                    pointerEvents: 'none' // Tıklamaları engellemek için
+                }}>
+                    <Text style={{
+                        color: theme.subText,
+                        fontSize: 9,
+                        opacity: 0.4,
+                        fontWeight: '600'
+                    }}>
+                     
+                    </Text>
+                </View>
+            </Animated.View>
+        </View>
     );
 }
 

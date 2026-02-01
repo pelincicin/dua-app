@@ -34,11 +34,9 @@ export default function AnaSayfa({ navigation }) {
     const isFocused = useIsFocused();
     const hedefZikir = 1200;
 
-    // now nesnesini her renderda değişmeyecek şekilde, ancak tarih değişince güncellenecek formda tutuyoruz
     const now = useMemo(() => new Date(), []);
     const todayStr = useMemo(() => now.toLocaleDateString('tr-TR'), [now]);
 
-    // --- ANIMASYON KURULUMU ---
     const slideAnim = useRef(new Animated.Value(isDarkMode ? 1 : 0)).current;
 
     useEffect(() => {
@@ -48,13 +46,12 @@ export default function AnaSayfa({ navigation }) {
             easing: Easing.bezier(0.4, 0, 0.2, 1),
             useNativeDriver: false,
         }).start();
-    }, [isDarkMode, slideAnim]); // slideAnim eklendi (ESLint hatası fix)
+    }, [isDarkMode, slideAnim]);
 
     const translateX = slideAnim.interpolate({
         inputRange: [0, 1],
         outputRange: [2, 24]
     });
-    // ---------------------------
 
     const { gununDuasi, gununSunneti, gununEsmasi, hicriTarih, selamlama } = useMemo(() => {
         const start = new Date(now.getFullYear(), 0, 0);
@@ -71,7 +68,7 @@ export default function AnaSayfa({ navigation }) {
         const hicri = new Intl.DateTimeFormat('tr-u-ca-islamic-uma-nu-latn', { day: 'numeric', month: 'long', year: 'numeric' }).format(now);
 
         return { gununDuasi: d, gununSunneti: s, gununEsmasi: e, hicriTarih: hicri, selamlama: sel };
-    }, [now]); // todayStr gereksiz olduğu için kaldırıldı
+    }, [now]);
 
     const fetchWeeklyData = useCallback(async () => {
         try {
@@ -106,7 +103,7 @@ export default function AnaSayfa({ navigation }) {
             fetchWeeklyData();
             loadIyilikler();
         }
-    }, [isFocused, fetchWeeklyData, loadIyilikler]); // Bağımlılıklar eklendi (ESLint hatası fix)
+    }, [isFocused, fetchWeeklyData, loadIyilikler]);
 
     const toggleIyilik = async (key) => {
         const yeniIyilikler = { ...iyilikler, [key]: !iyilikler[key] };
@@ -134,7 +131,7 @@ export default function AnaSayfa({ navigation }) {
         if (!gelecekGun) return { isim: "Mübarek Gün", kalan: "2027'de" };
         const gunSayisi = Math.ceil((gelecekGun.tarih - bugunSifir) / (1000 * 60 * 60 * 24));
         return { isim: gelecekGun.isim, kalan: gunSayisi === 0 ? "Bugün!" : `${gunSayisi} Gün Kaldı` };
-    }, [now]); // todayStr gereksiz olduğu için kaldırıldı
+    }, [now]);
 
     const maxWeeklyValue = Math.max(...weeklyStats.map(s => s.value), 1);
 
@@ -283,7 +280,6 @@ export default function AnaSayfa({ navigation }) {
                         <Text style={[styles.cardTag, { color: theme.active }]}>GÜNÜN DUASI</Text>
                     </View>
                     <Text style={[styles.cardTitle, { color: theme.text }]}>{gununDuasi.turkce}</Text>
-                    {/* HATA ÇÖZÜMÜ: Tırnak işaretleri escaped yapıldı */}
                     <Text style={[styles.cardDesc, { color: theme.subText }]}>&quot;{gununDuasi.anlam}&quot;</Text>
                 </View>
 
@@ -322,11 +318,19 @@ export default function AnaSayfa({ navigation }) {
                 {/* GÜNÜN SÜNNETİ */}
                 <View style={[styles.sunnetBox, { backgroundColor: theme.card, borderLeftColor: theme.active }]}>
                     <Text style={[styles.sunnetLabel, { color: theme.active }]}>Günün Sünneti</Text>
-                    {/* HATA ÇÖZÜMÜ: Tırnak işaretleri escaped yapıldı */}
                     <Text style={[styles.sunnetText, { color: theme.text }]}>&quot;{gununSunneti.metin}&quot; ({gununSunneti.kaynak})</Text>
                 </View>
 
-                <View style={{ height: 100 }} />
+                {/* TASARIMCI İMZASI - SADE & MODERN */}
+                <View style={styles.footerSignature}>
+                    <View style={[styles.footerLine, { backgroundColor: theme.border }]} />
+                    <Text style={[styles.footerLabel, { color: theme.subText }]}>Tasarım & Geliştirme</Text>
+                    <Text style={[styles.footerName, { color: theme.text }]}>PELİN ÇİÇİN</Text>
+                    <View style={[styles.footerLine, { backgroundColor: theme.border }]} />
+                </View>
+
+                {/* Boşluğu azalttık */}
+                <View style={{ height: 40 }} />
             </ScrollView>
         </SafeAreaView>
     );
@@ -338,26 +342,8 @@ const styles = StyleSheet.create({
     topInfoBar: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 10, marginTop: 10 },
     hicriDate: { fontSize: 18, fontWeight: '900' },
     miladiDate: { fontSize: 13, fontWeight: '600' },
-    themeToggleNew: {
-        width: 54,
-        height: 30,
-        borderRadius: 15,
-        borderWidth: 1,
-        justifyContent: 'center',
-        padding: 2,
-    },
-    themeToggleInner: {
-        width: 24,
-        height: 24,
-        borderRadius: 12,
-        justifyContent: 'center',
-        alignItems: 'center',
-        shadowColor: "#000",
-        shadowOffset: { width: 0, height: 1 },
-        shadowOpacity: 0.2,
-        shadowRadius: 1.41,
-        elevation: 2,
-    },
+    themeToggleNew: { width: 54, height: 30, borderRadius: 15, borderWidth: 1, justifyContent: 'center', padding: 2 },
+    themeToggleInner: { width: 24, height: 24, borderRadius: 12, justifyContent: 'center', alignItems: 'center', elevation: 2 },
     daysBadge: { paddingVertical: 6, paddingHorizontal: 12, borderRadius: 10, alignSelf: 'flex-start', marginBottom: 15 },
     daysLabel: { fontSize: 11, fontWeight: '800' },
     progressCard: { padding: 20, borderRadius: 25, borderWidth: 1, marginBottom: 15 },
@@ -377,30 +363,10 @@ const styles = StyleSheet.create({
     chartValueText: { fontSize: 9, fontWeight: 'bold', marginTop: 2 },
     sectionTitle: { fontSize: 15, fontWeight: '900', marginBottom: 12, marginTop: 5 },
     iyilikGrid: { flexDirection: 'row', flexWrap: 'wrap', gap: 10, marginBottom: 20 },
-    iyilikItem: {
-        width: (width - 50) / 2,
-        paddingVertical: 10,
-        paddingHorizontal: 12,
-        borderRadius: 20,
-        borderWidth: 2,
-        alignItems: 'center',
-        flexDirection: 'row',
-        gap: 10,
-        shadowColor: "#000",
-        shadowOffset: { width: 0, height: 1 },
-        shadowOpacity: 0.1,
-        shadowRadius: 2,
-        elevation: 2
-    },
-    iconCircle: {
-        width: 32,
-        height: 32,
-        borderRadius: 16,
-        justifyContent: 'center',
-        alignItems: 'center'
-    },
+    iyilikItem: { width: (width - 50) / 2, paddingVertical: 10, paddingHorizontal: 12, borderRadius: 20, borderWidth: 2, alignItems: 'center', flexDirection: 'row', gap: 10, elevation: 2 },
+    iconCircle: { width: 32, height: 32, borderRadius: 16, justifyContent: 'center', alignItems: 'center' },
     iyilikText: { fontSize: 11, fontWeight: '900' },
-    adContainer: { width: '100%', height: 70, borderRadius: 20, borderWidth: 1, borderStyle: 'dashed', marginBottom: 20, justifyContent: 'center', alignItems: 'center', position: 'relative' },
+    adContainer: { width: '100%', height: 70, borderRadius: 20, borderWidth: 1, borderStyle: 'dashed', marginBottom: 20, justifyContent: 'center', alignItems: 'center' },
     adBadge: { position: 'absolute', top: 0, right: 0, backgroundColor: 'rgba(0,0,0,0.05)', paddingHorizontal: 8, paddingVertical: 2, borderBottomLeftRadius: 10 },
     adBadgeText: { fontSize: 7, fontWeight: 'bold', color: '#6C757D' },
     mainCard: { padding: 20, borderRadius: 25, borderWidth: 1, marginBottom: 20 },
@@ -419,4 +385,30 @@ const styles = StyleSheet.create({
     sunnetBox: { padding: 20, borderRadius: 20, borderLeftWidth: 5, marginBottom: 25 },
     sunnetLabel: { fontSize: 12, fontWeight: '900', marginBottom: 8 },
     sunnetText: { fontSize: 15, fontWeight: '500' },
+
+    // YENİ İMZA STİLLERİ - GÜNCELLENDİ
+    footerSignature: {
+        alignItems: 'center',
+        marginTop: 20, // Boşluk azaltıldı
+        marginBottom: 10,
+        width: '100%'
+    },
+    footerLine: {
+        width: width * 0.4,
+        height: 1,
+        marginVertical: 8, // Çizgi arası daraltıldı
+        opacity: 0.2
+    },
+    footerLabel: {
+        fontSize: 9, // Biraz daha küçültüldü
+        fontWeight: '500',
+        letterSpacing: 1,
+        marginBottom: 2,
+        opacity: 0.7
+    },
+    footerName: {
+        fontSize: 14, // Daha dengeli bir boyut
+        fontWeight: '800',
+        letterSpacing: 3
+    }
 });

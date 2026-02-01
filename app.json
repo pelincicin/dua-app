@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Huzur: Zikirmatik ve Dualar",
-    "slug": "dua_app",
+    "slug": "huzur-zikirmatik-ve-dualar",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/logo.png",
@@ -16,7 +16,8 @@
       "permissions": [
         "NOTIFICATIONS",
         "VIBRATE",
-        "SCHEDULE_EXACT_ALARM"
+        "SCHEDULE_EXACT_ALARM",
+        "RECEIVE_BOOT_COMPLETED"
       ],
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/logo.png",

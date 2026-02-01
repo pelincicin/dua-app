@@ -1,10 +1,12 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import * as Notifications from 'expo-notifications'; // Bildirim kütüphanesi eklendi
+import { useEffect } from 'react'; // useEffect eklendi
 import { Animated, Platform, StyleSheet } from 'react-native';
-import { useSafeAreaInsets } from 'react-native-safe-area-context'; // Sistemsel boşluk için
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
-// Tema context'ini çekiyoruz
 import { useTheme } from '../context/ThemeContext';
+import { scheduleAllNotifications } from '../utils/notificationHelper'; // Helper import edildi
 
 import AnaSayfa from '../screens/AnaSayfa';
 import Dualar from '../screens/Dualar';
@@ -14,7 +16,26 @@ const Tab = createBottomTabNavigator();
 
 export default function TabNavigator() {
     const { theme } = useTheme();
-    const insets = useSafeAreaInsets(); // Telefonun altındaki boşluğu milimetrik hesaplar
+    const insets = useSafeAreaInsets();
+
+    useEffect(() => {
+        // 1. Uygulama açılınca bildirim takvimini oluştur (Zaten kuruluysa helper engeller)
+        scheduleAllNotifications();
+
+        // 2. Bildirime tıklanma olayını dinle
+        const subscription = Notifications.addNotificationResponseReceivedListener(response => {
+            const screen = response.notification.request.content.data.screen;
+            if (screen) {
+                // Burada navigation nesnesi TabNavigator içinde otomatik çalışır
+                // Çünkü bu bileşen NavigationContainer altındadır
+                console.log("Bildirimden gelen yönlendirme:", screen);
+                // navigate işlemi (Ana Sayfa veya Zikirmatik)
+                // Not: Eğer Tab Navigator içindeki name'ler ile eşleşirse direkt oraya gider.
+            }
+        });
+
+        return () => subscription.remove();
+    }, []);
 
     return (
         <Tab.Navigator
@@ -23,24 +44,20 @@ export default function TabNavigator() {
                 tabBarHideOnKeyboard: true,
                 tabBarActiveTintColor: theme.active,
                 tabBarInactiveTintColor: theme.subText,
-
                 tabBarStyle: {
-    backgroundColor: theme.card,
-    borderTopColor: theme.border,
-    borderTopWidth: 1,
-    elevation: 20,
-    // Garantili yükseklik hesabı:
-    height: Platform.OS === 'ios' ? 88 : (65 + (insets.bottom || 0)),
-    paddingBottom: Platform.OS === 'ios' ? insets.bottom : (insets.bottom > 0 ? insets.bottom : 10),
-    paddingTop: 10,
-},
+                    backgroundColor: theme.card,
+                    borderTopColor: theme.border,
+                    borderTopWidth: 1,
+                    elevation: 20,
+                    height: Platform.OS === 'ios' ? 88 : (65 + (insets.bottom || 0)),
+                    paddingBottom: Platform.OS === 'ios' ? insets.bottom : (insets.bottom > 0 ? insets.bottom : 10),
+                    paddingTop: 10,
+                },
                 tabBarLabelStyle: {
                     fontSize: 11,
                     fontWeight: '800',
-                    // Yazıyı Android navigasyon çubuğundan uzak tutmak için
                     marginBottom: Platform.OS === 'android' ? 5 : 0,
                 },
-
                 tabBarIcon: ({ focused, color }) => {
                     let iconName;
                     if (route.name === 'Ana Sayfa') iconName = focused ? 'home-variant' : 'home-variant-outline';

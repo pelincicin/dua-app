@@ -3,11 +3,11 @@ import * as Notifications from 'expo-notifications';
 import { Platform } from 'react-native';
 
 // 1. Bildirim Davranışı Ayarı
-// Uygulama AÇIKKEN (Ön planda) bildirimlerin gelmesini engeller
+// Uygulama açıkken (ön planda) bildirimlerin sessiz kalmasını sağlar.
 Notifications.setNotificationHandler({
     handleNotification: async () => ({
-        shouldShowAlert: false, // Uygulama içindeyken bildirim gösterme
-        shouldPlaySound: false, // Ses çalma
+        shouldShowAlert: false,
+        shouldPlaySound: false,
         shouldSetBadge: false,
     }),
 });
@@ -37,8 +37,8 @@ export const setupNotifications = async () => {
     return true;
 };
 
-// 3. Merkezi Bildirim Planlayıcı
-const schedule = async (id, title, body, trigger) => {
+// 3. Merkezi Bildirim Planlayıcı (Data parametresi eklendi)
+const schedule = async (id, title, body, trigger, screenName) => {
     try {
         await Notifications.scheduleNotificationAsync({
             identifier: id,
@@ -47,6 +47,7 @@ const schedule = async (id, title, body, trigger) => {
                 body,
                 sound: true,
                 priority: Notifications.AndroidNotificationPriority.MAX,
+                data: { screen: screenName }, // Tıklandığında gidilecek ekran bilgisi
                 android: {
                     channelId: 'zikir-v2',
                     pressAction: { id: 'default' }
@@ -67,46 +68,49 @@ export const scheduleDuaReminder = () => schedule(
     'dua_daily',
     "Hayırlı Sabahlar 🤲",
     "Günün özel duasını okuyarak huzura kavuşmak ister misin?",
-    { hour: 10, minute: 0, repeats: true }
+    { hour: 10, minute: 0, repeats: true },
+    'Ana Sayfa' // Tıklanınca gideceği ekran adı
 );
 
 export const scheduleSalavatReminder = () => schedule(
     'salavat_daily',
     "Salavat Getirmeyi Unutma ✨",
-    "Peygamber Efendimize (sav) bir salavat göndererek güne bereket katabilirsin.",
-    { hour: 14, minute: 5, repeats: true }
+    "Efendimize (sav) bir salavat göndererek güne bereket katabilirsin.",
+    { hour: 14, minute: 5, repeats: true },
+    'Ana Sayfa'
 );
 
 export const scheduleFridayReminder = () => schedule(
     'friday_weekly',
     "Hayırlı Cumalar 🌹",
-    { weekday: 6, hour: 11, minute: 0, repeats: true } // Android'de 6 = Cuma
+    "Bugün Cuma; Kehf suresini okumayı ve dua etmeyi unutmayın.",
+    { weekday: 6, hour: 11, minute: 0, repeats: true },
+    'Ana Sayfa'
 );
 
 export const scheduleZikirSummary = () => schedule(
     'zikir_summary',
     "Günün Zikir Notu ✨",
-    "Bugünkü zikir hedefine ulaştın mı? Kontrol etmek ve huzura kavuşmak için tıkla. 🤲",
-    { hour: 19, minute: 25, repeats: true }
+    "Bugünkü zikir hedefine ulaştın mı? Kontrol etmek için tıkla. 🤲",
+    { hour: 19, minute: 0, repeats: true },
+    'Zikirmatik' // Buraya Zikirmatik sayfasının Navigation name'ini yazıyoruz
 );
 
-// 5. Ana Başlatıcı (Optimize Edilmiş)
+// 5. Ana Başlatıcı
 export const scheduleAllNotifications = async () => {
     try {
-        // Kontrol: Daha önce kurulum yapıldı mı?
         const isSet = await AsyncStorage.getItem('notifications_initialised');
         if (isSet === 'true') {
-            console.log("Bildirimler zaten kurulu, işlem atlandı.");
+            console.log("Bildirimler zaten kurulu, tekrar kurulmadı.");
             return;
         }
 
         const hasPermission = await setupNotifications();
         if (!hasPermission) return;
 
-        // Temiz bir başlangıç yap
+        // Eski planları temizle ve yenilerini kur
         await Notifications.cancelAllScheduledNotificationsAsync();
 
-        // Planları kur
         await Promise.all([
             scheduleDuaReminder(),
             scheduleSalavatReminder(),
@@ -114,9 +118,8 @@ export const scheduleAllNotifications = async () => {
             scheduleZikirSummary()
         ]);
 
-        // Kilidi kapat (Bir daha kurulum yapmasın)
         await AsyncStorage.setItem('notifications_initialised', 'true');
-        console.log("Tüm bildirimler ilk kez kuruldu.");
+        console.log("Tüm bildirimler başarıyla planlandı.");
 
     } catch (error) {
         console.log("Bildirim kurulum hatası:", error);
