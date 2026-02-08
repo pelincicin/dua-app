@@ -14,14 +14,11 @@
     "android": {
       "package": "com.pelincicin.huzurzikirmatikvedualar",
       "permissions": [
-        "NOTIFICATIONS",
-        "VIBRATE",
-        "SCHEDULE_EXACT_ALARM",
-        "RECEIVE_BOOT_COMPLETED"
+        "VIBRATE"
       ],
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/logo.png",
-        "backgroundColor": "#1B4332"
+        "foregroundImage": "./assets/images/android-icon-foreground.png",
+        "backgroundImage": "./assets/images/android-icon-background.png"
       },
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false
@@ -34,26 +31,14 @@
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/logo.png",
-          "imageWidth": 160,
+          "image": "./assets/images/android-icon-foreground.png",
+          "imageWidth": 180,
           "resizeMode": "contain",
-          "backgroundColor": "#1B4332",
-          "dark": {
-            "image": "./assets/images/logo.png",
-            "backgroundColor": "#1B4332"
-          }
+          "backgroundColor": "#1B4332"
         }
       ],
       "expo-audio",
-      "expo-font",
-      [
-        "expo-notifications",
-        {
-          "icon": "./assets/images/logo.png",
-          "color": "#1B4332",
-          "sounds": []
-        }
-      ]
+      "expo-font"
     ],
     "experiments": {
       "typedRoutes": true,
