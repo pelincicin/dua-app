@@ -99,7 +99,7 @@ export const scheduleZikirSummary = () => schedule(
 // 5. Ana Başlatıcı
 export const scheduleAllNotifications = async () => {
     try {
-        const isSet = await AsyncStorage.getItem('notifications_initialised');
+        const isSet = await AsyncStorage.getItem('notifications_initialised_v2');
         if (isSet === 'true') {
             console.log("Bildirimler zaten kurulu, tekrar kurulmadı.");
             return;
@@ -118,7 +118,7 @@ export const scheduleAllNotifications = async () => {
             scheduleZikirSummary()
         ]);
 
-        await AsyncStorage.setItem('notifications_initialised', 'true');
+        await AsyncStorage.setItem('notifications_initialised_v2', 'true');
         console.log("Tüm bildirimler başarıyla planlandı.");
 
     } catch (error) {

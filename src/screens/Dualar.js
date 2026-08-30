@@ -8,16 +8,15 @@ import {
     KeyboardAvoidingView,
     Platform,
     StatusBar as RNStatusBar,
-    SafeAreaView,
     StyleSheet,
     Text,
     TextInput,
     TouchableOpacity,
     View
 } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTheme } from '../context/ThemeContext';
 import data from '../data/prayers.json';
-
 const { width } = Dimensions.get('window');
 const isIPad = width > 600;
 
@@ -118,7 +117,7 @@ export default function Dualar({ navigation }) {
     };
 
     return (
-        <SafeAreaView style={[styles.safe, { backgroundColor: theme.bg }]}>
+        <SafeAreaView style={[styles.safe, { backgroundColor: theme.bg }]} edges={['top', 'left', 'right']}>
             <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : 'height'} style={{ flex: 1 }}>
 
                 <View style={styles.header}>

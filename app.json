@@ -2,47 +2,90 @@
   "expo": {
     "name": "Huzur: Zikirmatik ve Dualar",
     "slug": "huzur-zikirmatik-ve-dualar",
-    "version": "1.0.0",
+    "version": "1.2.0",
     "orientation": "portrait",
     "icon": "./assets/images/logo.png",
     "userInterfaceStyle": "automatic",
     "backgroundColor": "#1B4332",
+    "splash": {
+      "image": "./assets/images/logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1B4332"
+    },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.pelincicin.huzurzikirmatikvedualar"
+      "bundleIdentifier": "com.pelincicin.huzurzikirmatikvedualar",
+      "infoPlist": {
+        "NSUserTrackingUsageDescription": "Size daha uygun reklamlar sunabilmemiz için izninize ihtiyacımız var."
+      }
     },
     "android": {
       "package": "com.pelincicin.huzurzikirmatikvedualar",
       "permissions": [
-        "VIBRATE"
+        "INTERNET",
+        "FOREGROUND_SERVICE",
+        "FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+        "com.google.android.gms.permission.AD_ID"
       ],
+      "config": {
+        "googleMobileAdsAppId": "ca-app-pub-9686111595009995~2381115391"
+      },
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/android-icon-foreground.png",
-        "backgroundImage": "./assets/images/android-icon-background.png"
+        "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
-    },
-    "web": {
-      "favicon": "./assets/images/favicon.png"
+      "edgeToEdgeEnabled": true
     },
     "plugins": [
-      "expo-router",
       [
-        "expo-splash-screen",
+        "react-native-android-widget",
         {
-          "image": "./assets/images/android-icon-foreground.png",
-          "imageWidth": 180,
-          "resizeMode": "contain",
-          "backgroundColor": "#1B4332"
+          "widgets": [
+            {
+              "name": "ZikirWidget",
+              "label": "Zikir Sayacı",
+              "description": "Bugünkü zikir sayacı ve günlük hedef",
+              "minWidth": "180dp",
+              "minHeight": "110dp",
+              "targetCellWidth": 2,
+              "targetCellHeight": 2,
+              "updatePeriodMillis": 0,
+              "initialLayout": "@layout/rn_widget_loading"
+            }
+          ]
         }
       ],
       "expo-audio",
-      "expo-font"
+      "expo-font",
+      "expo-asset",
+      "expo-tracking-transparency",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "compileSdkVersion": 35,
+            "targetSdkVersion": 35,
+            "buildToolsVersion": "35.0.0",
+            "kotlinVersion": "2.1.20",
+            "extraManifestAttributes": {
+              "tools:replace": "android:value"
+            }
+          }
+        }
+      ],
+      [
+        "react-native-google-mobile-ads",
+        {
+          "androidAppId": "ca-app-pub-9686111595009995~2381115391",
+          "iosAppId": "ca-app-pub-9686111595009995~2381115391",
+          "delayAppMeasurementInit": false
+        }
+      ]
     ],
-    "experiments": {
-      "typedRoutes": true,
-      "reactCompiler": true
+    "extra": {
+      "eas": {
+        "projectId": "83a679be-2386-4313-befd-a07467a2d1e3"
+      }
     }
   }
 }

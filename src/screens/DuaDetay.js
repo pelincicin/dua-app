@@ -6,7 +6,6 @@ import {
     Dimensions,
     Platform,
     StatusBar as RNStatusBar,
-
     ScrollView,
     Share,
     StyleSheet,
@@ -14,10 +13,16 @@ import {
     TouchableOpacity,
     View
 } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { BannerAd, BannerAdSize } from 'react-native-google-mobile-ads';
+import { AD_UNIT_IDS } from '../../AdsConfig';
+// GÜNCEL KÜTÜPHANE
+import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 import Svg, { Circle } from 'react-native-svg';
 import { useTheme } from '../context/ThemeContext';
+
 const { width } = Dimensions.get('window');
+
+const adUnitId = AD_UNIT_IDS.DUA_DETAY;
 
 const AUDIO_MAP = {
     "fatiha": require('../../assets/sounds/sureler/fatiha.mp3'),
@@ -47,6 +52,7 @@ export default function DuaDetay({ route, navigation }) {
     const { prayer } = route.params;
     const [duaSayac, setDuaSayac] = useState(0);
     const { theme, isDarkMode } = useTheme();
+    const insets = useSafeAreaInsets(); // SİSTEM ÇUBUĞU BİLGİSİ
 
     const soundFile = prayer.audio ? AUDIO_MAP[prayer.audio] : null;
     const player = useAudioPlayer(soundFile);
@@ -58,9 +64,8 @@ export default function DuaDetay({ route, navigation }) {
     useLayoutEffect(() => {
         navigation.setOptions({
             headerShown: false,
-            cardStyle: { backgroundColor: theme.bg }
         });
-    }, [navigation, theme]);
+    }, [navigation]);
 
     useEffect(() => {
         const loadCounter = async () => {
@@ -77,9 +82,9 @@ export default function DuaDetay({ route, navigation }) {
         setDuaSayac(yeniDeger);
         try {
             await AsyncStorage.setItem(`sayac_${prayer.id}`, yeniDeger.toString());
-            const mevcutToplam = await AsyncStorage.getItem('toplamZikir');
+            const mevcutToplam = await AsyncStorage.getItem('@toplam_zikir');
             const yeniToplam = (parseInt(mevcutToplam) || 0) + 1;
-            await AsyncStorage.setItem('toplamZikir', yeniToplam.toString());
+            await AsyncStorage.setItem('@toplam_zikir', yeniToplam.toString());
         } catch (e) { console.log(e); }
     };
 
@@ -114,100 +119,121 @@ export default function DuaDetay({ route, navigation }) {
 
     return (
         <View style={{ flex: 1, backgroundColor: theme.bg }}>
-            <View style={[styles.mainContainer, { backgroundColor: theme.bg }]}>
-                <RNStatusBar translucent backgroundColor="transparent" barStyle={isDarkMode ? "light-content" : "dark-content"} />
+            <RNStatusBar translucent backgroundColor="transparent" barStyle={isDarkMode ? "light-content" : "dark-content"} />
 
-                <SafeAreaView style={styles.safeArea}>
-                    <View style={[styles.topBar, { borderBottomColor: theme.border }]}>
-                        <TouchableOpacity onPress={() => navigation.goBack()} style={styles.topBarBtn}>
-                            <MaterialCommunityIcons name="arrow-left" size={28} color={theme.text} />
-                        </TouchableOpacity>
-                        <Text style={[styles.topBarTitle, { color: theme.text }]} numberOfLines={1}>
-                            {prayer.title}
-                        </Text>
-                        <TouchableOpacity onPress={onShare} style={styles.topBarBtn}>
-                            <MaterialCommunityIcons name="share-variant" size={24} color={theme.text} />
-                        </TouchableOpacity>
-                    </View>
+            {/* EDGES TOP SAYESİNDE SADECE ÜSTTEN BOŞLUK VERİR */}
+            <SafeAreaView style={styles.safeArea} edges={['top']}>
+                {/* ÜST BAR */}
+                <View style={[styles.topBar, { borderBottomColor: theme.border }]}>
+                    <TouchableOpacity onPress={() => navigation.goBack()} style={styles.topBarBtn}>
+                        <MaterialCommunityIcons name="arrow-left" size={28} color={theme.text} />
+                    </TouchableOpacity>
+                    <Text style={[styles.topBarTitle, { color: theme.text }]} numberOfLines={1}>
+                        {prayer.title}
+                    </Text>
+                    <TouchableOpacity onPress={onShare} style={styles.topBarBtn}>
+                        <MaterialCommunityIcons name="share-variant" size={24} color={theme.text} />
+                    </TouchableOpacity>
+                </View>
 
-                    <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
-                        <View style={styles.contentInner}>
+                <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
+                    <View style={styles.contentInner}>
 
-                            {soundFile && (
-                                <View style={[styles.compactAudioBar, { backgroundColor: isDarkMode ? theme.card : '#F4F9F6', borderColor: theme.border }]}>
-                                    <TouchableOpacity activeOpacity={0.7} onPress={togglePlayback} style={styles.miniPlayBtn}>
-                                        <Svg width={CIRCLE_SIZE} height={CIRCLE_SIZE} style={styles.svgLayer}>
-                                            <Circle
-                                                cx={CIRCLE_SIZE / 2} cy={CIRCLE_SIZE / 2} r={RADIUS}
-                                                stroke={isDarkMode ? "#333" : "#E0E9E4"} strokeWidth={STROKE_WIDTH} fill="transparent"
-                                            />
-                                            <Circle
-                                                cx={CIRCLE_SIZE / 2} cy={CIRCLE_SIZE / 2} r={RADIUS}
-                                                stroke={theme.active} strokeWidth={STROKE_WIDTH} fill="transparent"
-                                                strokeDasharray={CIRCUMFERENCE} strokeDashoffset={strokeDashoffset}
-                                                strokeLinecap="round" rotation="-90" origin={`${CIRCLE_SIZE / 2}, ${CIRCLE_SIZE / 2}`}
-                                            />
-                                        </Svg>
-                                        <MaterialCommunityIcons
-                                            name={status.playing ? "pause" : "play"}
-                                            size={20} color={theme.active}
+                        {/* SES ÇALAR ÇUBUĞU */}
+                        {soundFile && (
+                            <View style={[styles.compactAudioBar, { backgroundColor: isDarkMode ? theme.card : '#F4F9F6', borderColor: theme.border }]}>
+                                <TouchableOpacity activeOpacity={0.7} onPress={togglePlayback} style={styles.miniPlayBtn}>
+                                    <Svg width={CIRCLE_SIZE} height={CIRCLE_SIZE} style={styles.svgLayer}>
+                                        <Circle
+                                            cx={CIRCLE_SIZE / 2} cy={CIRCLE_SIZE / 2} r={RADIUS}
+                                            stroke={isDarkMode ? "#333" : "#E0E9E4"} strokeWidth={STROKE_WIDTH} fill="transparent"
                                         />
-                                    </TouchableOpacity>
+                                        <Circle
+                                            cx={CIRCLE_SIZE / 2} cy={CIRCLE_SIZE / 2} r={RADIUS}
+                                            stroke={theme.active} strokeWidth={STROKE_WIDTH} fill="transparent"
+                                            strokeDasharray={CIRCUMFERENCE} strokeDashoffset={strokeDashoffset}
+                                            strokeLinecap="round" rotation="-90" origin={`${CIRCLE_SIZE / 2}, ${CIRCLE_SIZE / 2}`}
+                                        />
+                                    </Svg>
+                                    <MaterialCommunityIcons
+                                        name={status.playing ? "pause" : "play"}
+                                        size={20} color={theme.active}
+                                    />
+                                </TouchableOpacity>
 
-                                    <View style={styles.audioInfo}>
-                                        <Text style={[styles.audioLabel, { color: theme.text }]}>Sesli Okunuşu</Text>
-                                    </View>
-
-                                    <TouchableOpacity onPress={restartAudio} style={styles.replayBtn}>
-                                        <MaterialCommunityIcons name="replay" size={22} color={theme.subText} />
-                                    </TouchableOpacity>
+                                <View style={styles.audioInfo}>
+                                    <Text style={[styles.audioLabel, { color: theme.text }]}>Sesli Okunuşu</Text>
+                                    <Text style={[styles.audioSubLabel, { color: theme.subText }]}>Dinlemek için oynatın</Text>
                                 </View>
-                            )}
 
-                            <View style={[styles.arabicCard, { backgroundColor: isDarkMode ? theme.card : '#F1F8F5', borderColor: isDarkMode ? theme.border : '#E2EFE9' }]}>
-                                <Text style={[styles.arabicText, { color: isDarkMode ? '#FFF' : '#1B4332' }]}>{prayer.arabic}</Text>
+                                <TouchableOpacity onPress={restartAudio} style={styles.replayBtn}>
+                                    <MaterialCommunityIcons name="replay" size={22} color={theme.subText} />
+                                </TouchableOpacity>
                             </View>
+                        )}
 
-                            <View style={[styles.adContainer, { backgroundColor: isDarkMode ? theme.card : '#F1F8F5', borderColor: isDarkMode ? theme.border : '#E2EFE9' }]}>
-                                <Text style={{ color: theme.subText, fontSize: 10, fontWeight: '800', letterSpacing: 1.5 }}>REKLAM ALANI</Text>
-                            </View>
-
-                            <View style={styles.section}>
-                                <View style={styles.sectionHeader}>
-                                    <MaterialCommunityIcons name="translate" size={20} color={theme.active} />
-                                    <Text style={[styles.sectionTitle, { color: theme.active }]}>TÜRKÇE OKUNUŞU</Text>
-                                </View>
-                                <Text style={[styles.readingText, { color: theme.text }]}>{prayer.pronunciation}</Text>
-                            </View>
-
-                            <View style={[styles.section, styles.meaningBox, { backgroundColor: theme.card, borderColor: theme.border }]}>
-                                <View style={styles.sectionHeader}>
-                                    <MaterialCommunityIcons name="book-open-page-variant" size={20} color="#3A86FF" />
-                                    <Text style={[styles.sectionTitle, { color: '#3A86FF' }]}>MEAL / ANLAM</Text>
-                                </View>
-                                <Text style={[styles.meaningText, { color: theme.text }]}>{prayer.meaning}</Text>
-                            </View>
-
-                            <View style={{ height: 180 }} />
+                        {/* ARAPÇA METİN */}
+                        <View style={[styles.arabicCard, { backgroundColor: isDarkMode ? theme.card : '#F1F8F5', borderColor: isDarkMode ? theme.border : '#E2EFE9' }]}>
+                            <Text style={[styles.arabicText, { color: isDarkMode ? '#FFF' : '#1B4332' }]}>{prayer.arabic}</Text>
                         </View>
-                    </ScrollView>
-                </SafeAreaView>
 
-                <View style={[styles.footerCounter, { backgroundColor: theme.card, borderTopColor: theme.border, paddingBottom: Platform.OS === 'ios' ? 35 : 15, height: Platform.OS === 'ios' ? 120 : 100 }]}>
-                    <View style={styles.counterInfo}>
-                        <Text style={[styles.counterLabel, { color: theme.subText }]}>TOPLAM OKUMA</Text>
-                        <Text style={[styles.counterValue, { color: theme.active }]}>{duaSayac}</Text>
+                        {/* REKLAM BİRİMİ */}
+                        <View style={styles.adWrapper}>
+                            <BannerAd
+                                unitId={adUnitId}
+                                size={BannerAdSize.BANNER}
+                                requestOptions={{ requestNonPersonalizedAdsOnly: true }}
+                            />
+                        </View>
+
+                        {/* OKUNUŞ BÖLÜMÜ */}
+                        <View style={styles.section}>
+                            <View style={styles.sectionHeader}>
+                                <MaterialCommunityIcons name="translate" size={20} color={theme.active} />
+                                <Text style={[styles.sectionTitle, { color: theme.active }]}>TÜRKÇE OKUNUŞU</Text>
+                            </View>
+                            <Text style={[styles.readingText, { color: theme.text }]}>{prayer.pronunciation}</Text>
+                        </View>
+
+                        {/* ANLAM BÖLÜMÜ */}
+                        <View style={[styles.section, styles.meaningBox, { backgroundColor: theme.card, borderColor: theme.border }]}>
+                            <View style={styles.sectionHeader}>
+                                <MaterialCommunityIcons name="book-open-page-variant" size={20} color="#3A86FF" />
+                                <Text style={[styles.sectionTitle, { color: '#3A86FF' }]}>MEAL / ANLAM</Text>
+                            </View>
+                            <Text style={[styles.meaningText, { color: theme.text }]}>{prayer.meaning}</Text>
+                        </View>
+
+                        {/* ALTTAKI PANEL KADAR BOŞLUK BIRAKIR */}
+                        <View style={{ height: 140 }} />
                     </View>
-                    <View style={styles.actionContainer}>
-                        <TouchableOpacity activeOpacity={0.7} onPress={handleIncrement} style={[styles.readButton, { backgroundColor: theme.active }]}>
-                            <MaterialCommunityIcons name="gesture-tap" size={26} color="white" />
-                            <Text style={styles.readButtonText}>SAY</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity onPress={handleReset} style={styles.resetBtn}>
-                            <MaterialCommunityIcons name="refresh" size={22} color="#FF4D4D" />
-                            <Text style={styles.resetBtnText}>SIFIRLA</Text>
-                        </TouchableOpacity>
-                    </View>
+                </ScrollView>
+            </SafeAreaView>
+
+            {/* ALT SAYAÇ PANELİ - INSETS.BOTTOM İLE TUŞLARIN ÜSTÜNE ÇIKARILDI */}
+            <View style={[styles.footerCounter, {
+                backgroundColor: theme.card,
+                borderTopColor: theme.border,
+                paddingBottom: Math.max(insets.bottom, 15), // ANDROID TUŞLARINI HESAPLAR
+                height: 100 + insets.bottom // DİNAMİK YÜKSEKLİK
+            }]}>
+                <View style={styles.counterInfo}>
+                    <Text style={[styles.counterLabel, { color: theme.subText }]}>BU DUA İÇİN OKUMA</Text>
+                    <Text style={[styles.counterValue, { color: theme.active }]}>{duaSayac}</Text>
+                </View>
+                <View style={styles.actionContainer}>
+                    <TouchableOpacity
+                        activeOpacity={0.8}
+                        onPress={handleIncrement}
+                        style={[styles.readButton, { backgroundColor: theme.active }]}
+                    >
+                        <MaterialCommunityIcons name="gesture-tap" size={26} color="white" />
+                        <Text style={styles.readButtonText}>OKUDUM</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={handleReset} style={styles.resetBtn}>
+                        <MaterialCommunityIcons name="refresh" size={22} color="#FF4D4D" />
+                        <Text style={styles.resetBtnText}>SIFIRLA</Text>
+                    </TouchableOpacity>
                 </View>
             </View>
         </View>
@@ -215,35 +241,77 @@ export default function DuaDetay({ route, navigation }) {
 }
 
 const styles = StyleSheet.create({
-    mainContainer: { flex: 1 },
     safeArea: { flex: 1 },
-    topBar: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', paddingHorizontal: 15, paddingTop: Platform.OS === 'android' ? RNStatusBar.currentHeight + 10 : 10, paddingBottom: 15, borderBottomWidth: 0.5 },
-    topBarTitle: { fontSize: 16, fontWeight: '700', flex: 1, textAlign: 'center' },
+    topBar: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        paddingHorizontal: 15,
+        paddingBottom: 15,
+        borderBottomWidth: 0.5
+    },
+    topBarTitle: { fontSize: 17, fontWeight: '800', flex: 1, textAlign: 'center' },
     topBarBtn: { padding: 8, width: 45 },
     scrollContent: { flexGrow: 1 },
-    contentInner: { paddingHorizontal: 20, paddingTop: 10 },
-    compactAudioBar: { flexDirection: 'row', alignItems: 'center', padding: 10, borderRadius: 14, borderWidth: 1, marginBottom: 20, marginTop: 5 },
+    contentInner: { paddingHorizontal: 20, paddingTop: 15 },
+    compactAudioBar: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        padding: 12,
+        borderRadius: 18,
+        borderWidth: 1,
+        marginBottom: 20
+    },
     miniPlayBtn: { width: CIRCLE_SIZE, height: CIRCLE_SIZE, justifyContent: 'center', alignItems: 'center' },
     svgLayer: { position: 'absolute' },
-    audioInfo: { flex: 1, marginLeft: 12 },
-    audioLabel: { fontSize: 14, fontWeight: '700' },
-    replayBtn: { padding: 8, marginLeft: 5 },
+    audioInfo: { flex: 1, marginLeft: 15 },
+    audioLabel: { fontSize: 14, fontWeight: '800' },
+    audioSubLabel: { fontSize: 11, marginTop: 2 },
+    replayBtn: { padding: 8 },
     arabicCard: { padding: 25, borderRadius: 25, borderWidth: 1, marginBottom: 20 },
-    adContainer: { width: '100%', height: 55, borderRadius: 20, borderWidth: 1, borderStyle: 'dashed', justifyContent: 'center', alignItems: 'center', marginBottom: 25 },
-    arabicText: { fontSize: width > 400 ? 28 : 24, textAlign: 'center', lineHeight: 50, fontFamily: Platform.OS === 'ios' ? 'Amiri' : 'serif' },
+    arabicText: {
+        fontSize: width > 400 ? 30 : 26,
+        textAlign: 'center',
+        lineHeight: 52,
+        fontFamily: Platform.OS === 'ios' ? 'Amiri' : 'serif'
+    },
+    adWrapper: { width: '100%', alignItems: 'center', marginBottom: 25 },
     section: { marginBottom: 25 },
     sectionHeader: { flexDirection: 'row', alignItems: 'center', gap: 8, marginBottom: 12 },
     sectionTitle: { fontSize: 11, fontWeight: '900', letterSpacing: 1.2 },
-    readingText: { fontSize: 16, lineHeight: 24, fontWeight: '600', fontStyle: 'italic' },
-    meaningBox: { padding: 20, borderRadius: 20, borderWidth: 1 },
-    meaningText: { fontSize: 15, lineHeight: 22, fontWeight: '500' },
-    footerCounter: { position: 'absolute', bottom: 0, left: 0, right: 0, paddingHorizontal: 20, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', borderTopWidth: 1, zIndex: 1000 },
+    readingText: { fontSize: 17, lineHeight: 26, fontWeight: '600', fontStyle: 'italic' },
+    meaningBox: { padding: 22, borderRadius: 24, borderWidth: 1 },
+    meaningText: { fontSize: 16, lineHeight: 24, fontWeight: '500' },
+    footerCounter: {
+        position: 'absolute',
+        bottom: 0,
+        left: 0,
+        right: 0,
+        paddingHorizontal: 20,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        borderTopWidth: 1,
+        elevation: 10,
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: -3 },
+        shadowOpacity: 0.1,
+        shadowRadius: 4
+    },
     counterInfo: { flex: 0.7 },
     counterLabel: { fontSize: 9, fontWeight: '800' },
-    counterValue: { fontSize: 30, fontWeight: '900' },
+    counterValue: { fontSize: 32, fontWeight: '900' },
     actionContainer: { flex: 1.3, flexDirection: 'row', alignItems: 'center', justifyContent: 'flex-end' },
-    readButton: { flexDirection: 'row', alignItems: 'center', paddingHorizontal: 20, paddingVertical: 12, borderRadius: 15, gap: 6 },
-    readButtonText: { color: 'white', fontSize: 16, fontWeight: '900' },
-    resetBtn: { marginLeft: 15, alignItems: 'center' },
-    resetBtnText: { color: '#FF4D4D', fontSize: 9, fontWeight: '800' }
+    readButton: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        paddingHorizontal: 18,
+        paddingVertical: 14,
+        borderRadius: 18,
+        gap: 8,
+        elevation: 2
+    },
+    readButtonText: { color: 'white', fontSize: 15, fontWeight: '900' },
+    resetBtn: { marginLeft: 18, alignItems: 'center' },
+    resetBtnText: { color: '#FF4D4D', fontSize: 9, fontWeight: '800', marginTop: 2 }
 });
