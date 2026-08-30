@@ -2,7 +2,7 @@
   "expo": {
     "name": "Huzur: Zikirmatik ve Dualar",
     "slug": "huzur-zikirmatik-ve-dualar",
-    "version": "1.2.0",
+    "version": "1.4.0",
     "orientation": "portrait",
     "icon": "./assets/images/logo.png",
     "userInterfaceStyle": "automatic",
@@ -63,9 +63,9 @@
         "expo-build-properties",
         {
           "android": {
-            "compileSdkVersion": 35,
-            "targetSdkVersion": 35,
-            "buildToolsVersion": "35.0.0",
+            "compileSdkVersion": 36,
+            "targetSdkVersion": 36,
+            "buildToolsVersion": "36.0.0",
             "kotlinVersion": "2.1.20",
             "extraManifestAttributes": {
               "tools:replace": "android:value"
